@@ -1,0 +1,38 @@
+﻿@model  IEnumerable<WebApplicationMVC.Models.Libro> 
+<!--  Incluir Modelo de Libro con iteración de la colecición de Libros  --> 
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MostrarLibros</title>
+</head>
+<body>
+    <div> 
+
+        <table>
+            @foreach (var libro in Model) // Usar el Model
+            {
+                <tr>
+                    <td>@libro.sTitulo</td>
+                    <td>@libro.sAutor</td>
+                </tr>
+
+                <tr> <!-- Usar DisplayFor tipado fuerte (strongly typed) y Intelisense, sin embargo más lento  -->
+                    <td>@Html.DisplayFor(modelItem => libro.sTitulo)</td>
+                    <td>@Html.DisplayFor(modelItem => libro.sAutor)</td>
+                </tr>
+
+            }
+
+        </table>
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>UsarViewDatayViewBag</title>
+</head>
+<body>
+    <div> 
+        <h1>@ViewData["Message"]</h1>
+        <h1>Numero de Libros: @ViewBag.TotalLibros</h1>
+        <h1>Temp Data: @TempData["edad"]</h1>
+
+    </div>
+</body>
+</html>

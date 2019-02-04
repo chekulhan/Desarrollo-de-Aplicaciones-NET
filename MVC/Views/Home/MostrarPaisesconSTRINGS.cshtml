@@ -1,0 +1,30 @@
+﻿@model List<string>   // Incluir el modelo de Paises
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MostrarPaisesconSTRINGS</title>
+</head>
+<body>
+    <div> 
+
+        Paises
+
+        <table>
+            @foreach (var pais in Model) // Usar el Model
+            {
+                <tr>
+                    <td>@pais</td>
+                </tr>
+            }
+           
+        </table>
+    </div>
+</body>
+</html>
