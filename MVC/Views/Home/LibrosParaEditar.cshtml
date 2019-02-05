@@ -1,0 +1,36 @@
+﻿@model  WebApplicationMVC.Models.Libro
+<!--  Incluir Modelo de Libro de la colecición de Libros  -->
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Libro para editar</title>
+</head>
+<body>
+    <div>
+
+
+        <p>
+            @using (Html.BeginForm("LibrosParaEditar", "Home", FormMethod.Post))
+            {
+
+                @Html.Label("Titulo")
+                @Html.TextBoxFor(m => Model.sTitulo)<br />
+                @Html.Label("Autor")
+                @Html.TextBoxFor(m => Model.sAutor)<br />
+
+                <input type="submit" value="Submit" />
+
+            }
+        </p>
+
+
+    </div>
+</body>
+</html>

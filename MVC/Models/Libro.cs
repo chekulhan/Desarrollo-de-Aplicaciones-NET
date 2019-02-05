@@ -16,5 +16,11 @@ namespace WebApplicationMVC.Models
             this.sTitulo = sTitulo;
             this.sAutor = sAutor;
         }
+
+        // Crear un constructor sin parámetros para evitar errores en EDITAR
+        public Libro()
+        {
+
+        }
     }
 }

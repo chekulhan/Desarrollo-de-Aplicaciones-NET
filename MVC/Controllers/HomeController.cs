@@ -72,8 +72,32 @@ namespace WebApplicationMVC.Controllers
             return View();
         }
 
-       
 
+
+        // Paso 6: Edit items
+        public ActionResult LibrosParaEditar()
+        {
+
+            Libro l = new Libro("ASP.NET", "Microsoft"); // Crear un objeto para editar
+
+            return View(l);
+        }
+
+        [HttpPost]
+        public ActionResult LibrosParaEditar(Libro libro)
+        {
+            // Conseguir datos del objeto Libro
+            string sTitulo = libro.sTitulo;
+            // guardarlos en Base de datos
+            
+            return Redirect("EditComplete");
+        }
+
+        public ActionResult EditComplete()
+        {
+
+            return View();
+        }
 
 
     }

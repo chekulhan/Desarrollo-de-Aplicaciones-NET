@@ -21,11 +21,13 @@
                 <tr>
                     <td>@libro.sTitulo</td>
                     <td>@libro.sAutor</td>
+                    <td>@Html.ActionLink("Edit", "LibrosParaEditar", new { id = libro.sTitulo })</td> <!--Usar un HTMLHelper -->
                 </tr>
 
                 <tr> <!-- Usar DisplayFor tipado fuerte (strongly typed) y Intelisense, sin embargo más lento  -->
                     <td>@Html.DisplayFor(modelItem => libro.sTitulo)</td>
                     <td>@Html.DisplayFor(modelItem => libro.sAutor)</td>
+                    <td>&nbsp;</td>
                 </tr>
 
             }
