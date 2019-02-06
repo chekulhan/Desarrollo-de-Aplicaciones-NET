@@ -100,5 +100,38 @@ namespace WebApplicationMVC.Controllers
         }
 
 
+        //Paso 7 Validacion
+        public ActionResult ValidarLibros()
+        {
+            LibroconValidacion lv = new LibroconValidacion();
+
+            lv.Titulo = "ASP.NET";
+            lv.Autor = "Microsoft";
+            lv.Precio = 5;
+
+            return View(lv);  // Pasar objeto de libros
+        }
+
+        [HttpPost]
+        //public ActionResult ValidarLibros([Bind(Include = "Titulo,Autor,Precio")] LibroconValidacion libro)
+        public ActionResult ValidarLibros(LibroconValidacion libro)
+        {
+            if (ModelState.IsValid) // Comprobar el el objeto pasa la validacion
+            {
+                // guardar cambios en la base de datos
+                return Content("<h1>Ha pasado correctamente la validación</h1>");
+                //return Redirect("Index");
+            }
+            
+            else
+            {
+                
+                // Errores de validación
+                return View(libro);  
+            }
+               
+        }
+
+
     }
 }
