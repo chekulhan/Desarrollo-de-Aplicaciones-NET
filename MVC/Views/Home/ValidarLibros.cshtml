@@ -1,0 +1,41 @@
+﻿@model  WebApplicationMVC.Models.LibroconValidacion
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>ValidarLibros</title>
+</head>
+<body>
+    <div> Validando Libros
+
+        <p>
+            @using (Html.BeginForm("ValidarLibros", "Home", FormMethod.Post))
+            {
+                <!-- Aplicar las validaciones de DataAnnotations en el objeto -->
+                @Html.Label("Titulo")
+                @Html.EditorFor(m => Model.Titulo)
+                @Html.ValidationMessageFor(m => Model.Titulo)<br />
+
+                @Html.Label("Autor")
+                @Html.EditorFor(m => Model.Autor)
+                @Html.ValidationMessageFor(m => Model.Autor)<br />
+
+                @Html.Label("Precio")
+                @Html.EditorFor(m => Model.Precio)
+                @Html.ValidationMessageFor(m => Model.Precio)<br />
+
+                <input type="submit" value="Submit" />
+
+            }
+        </p>
+
+
+    </div>
+</body>
+</html>
