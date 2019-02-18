@@ -79,6 +79,34 @@ namespace WebApplicationMVC.IoT.Controllers
 
 
    
+        public ActionResult IoTGetJson()
+        {
+
+            string API_KEY = "Z0HAVLYQ2VVYRB9J";  // thingspeak API KEY del profesor
+            string CHANNEL = "706261"; // thingspeak canal del profesor
+
+            HttpWebRequest wreq = (HttpWebRequest)WebRequest.Create("https://api.thingspeak.com/channels/" + CHANNEL + "/feeds.json?api_key=" + API_KEY);
+
+            wreq.Method = "GET";
+            wreq.ContentType = "application/json";
+            wreq.Accept = "application/json";
+
+
+            WebResponse myResponse = wreq.GetResponse();
+
+            Stream rebut = myResponse.GetResponseStream();
+
+            StreamReader readStream = new StreamReader(rebut, Encoding.UTF8);
+
+            string info = readStream.ReadToEnd();
+
+            myResponse.Close();
+            readStream.Close();
+
+            return Json( info, JsonRequestBehavior.AllowGet);
+
+
+        }
 
 
 
