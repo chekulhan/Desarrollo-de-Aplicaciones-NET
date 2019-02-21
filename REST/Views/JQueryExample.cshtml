@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "JQueryExample";
+}
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+
+    const URI = "https://jsonplaceholder.typicode.com/posts";
+    //const URI = "http://localhost:63102/api/productos/2"; // TO DO con cross domain access
+
+    $(document).ready(function () {
+
+
+        // Función que devuelve un Objeto 
+        $("button").click(function () {
+            $.get(URI, function (data, status) {
+                console.log("here called DATA:" + data.Nombre + "STATUS" + status);
+                $("#div1").text(data.Nombre + ' BODY ' + data.Precio);
+                console.log("{$data}");
+            });
+        });
+        */
+
+      // Función que devuelven un listado de Objetos 
+        $("button").click(function () {
+            $.get(URI, function (data, status) {
+                console.log("STATUS" + status);
+                // On success, 'data' es un LISTADO de datos.
+                $.each(data, function (key, item) {
+                    console.log(item.title);
+                    $('<li>', { text: item.title}).appendTo($('#milista'));
+                });
+
+
+            });
+
+        }); 
+
+
+    }); // fin documento ready
+
+   
+</script>
+
+<div id="div1">Cambiar los datos aqui</div>
+
+<button>Click me</button>
+
+<ul id="milista" />
+
+
