@@ -1,0 +1,4 @@
+Agregar el archivo Form1.cs
+Cambiar los Namespaces de "namespace WindowsFormsApp2" al namespace de tu proyecto
+
+Actualizar la conexion a la base de datos
