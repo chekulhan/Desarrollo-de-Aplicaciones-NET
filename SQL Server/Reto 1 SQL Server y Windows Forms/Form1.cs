@@ -68,7 +68,7 @@ namespace WindowsFormsERPVuelos
 
             cmd.Parameters.AddWithValue("@NombreVuelo", txtVuelo.Text.ToString());
             cmd.Parameters.AddWithValue("@Destino", txtDestino.Text.ToString());
-            cmd.Parameters.AddWithValue("@Avion", txtEmail.Text.ToString());
+            cmd.Parameters.AddWithValue("@Avion", txtAvion.Text.ToString());
 
             //Establecer parámetro de OUTPUT, en este caso en nuevo ID de SCOPE_IDENTITY()
             SqlParameter parameterOUTPUT = new SqlParameter();
@@ -161,7 +161,7 @@ namespace WindowsFormsERPVuelos
                 txtID.Text = "";
                 txtVuelo.Text = "";
                 txtDestino.Text = "";
-                txtEmail.Text = "";
+                txtAvion.Text = "";
 
                 RefreshGrid();
             }
