@@ -62,3 +62,45 @@ BEGIN
 END
 GO
 
+
+
+
+CREATE FUNCTION [dbo].[fct_FormatearProveedor]
+(
+@Proveedor varchar(100)
+)
+RETURNS varchar(100)
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @Result varchar(100)
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @Result = 'Nombre del Proveedor: ' + @Proveedor  FROM Proveedores
+
+	-- Return the result of the function
+	RETURN @Result
+
+END
+
+
+
+
+CREATE FUNCTION [dbo].[fct_MaximoSaldo]
+(
+
+)
+RETURNS money
+AS
+BEGIN
+	-- Declare the return variable here
+	DECLARE @Result money
+
+	-- Add the T-SQL statements to compute the return value here
+	SELECT @Result = 99
+
+	-- Return the result of the function
+	RETURN @Result
+
+END
+GO
