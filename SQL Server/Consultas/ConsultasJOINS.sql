@@ -24,3 +24,43 @@ SELECT DeptID FROM JOINS.Empleados
 SELECT DeptID FROM JOINS.Departamentos
 EXCEPT
 SELECT DeptID FROM JOINS.Empleados 
+
+
+
+
+-- Ejercicios de clase [AdventureWorksLT2008]
+SELECT * FROM [SalesLT].[SalesOrderHeader] as h
+INNER JOIN [SalesLT].[SalesOrderDetail] d ON h.SalesOrderID = d.SalesOrderID
+WHERE h.SalesOrderID = 71774
+
+
+-- Actividad 2 de consultas avanzadas [AdventureWorksLT2008]
+-- 1
+SELECT h.SalesOrderID, OrderDate, CustomerID, d.ProductID, d.UnitPrice, d.LineTotal, p.Name, p.ProductNumber 
+FROM [SalesLT].[SalesOrderHeader] as h
+INNER JOIN [SalesLT].[SalesOrderDetail] d ON h.SalesOrderID = d.SalesOrderID
+	INNER JOIN [SalesLT].[Product] p ON d.ProductID = p.ProductID
+WHERE h.SalesOrderID = 71885
+
+--2 Con cliente
+SELECT c.CustomerID, c.FirstName, c.LastName, h.SalesOrderID, OrderDate, d.ProductID, d.UnitPrice, d.OrderQty, d.LineTotal, p.Name, p.ProductNumber 
+FROM [SalesLT].[Customer] c INNER JOIN [SalesLT].[SalesOrderHeader] as h ON c.CustomerID =  h.CustomerID
+	INNER JOIN [SalesLT].[SalesOrderDetail] d ON h.SalesOrderID = d.SalesOrderID
+		INNER JOIN [SalesLT].[Product] p ON d.ProductID = p.ProductID
+WHERE h.SalesOrderID = 71885
+
+
+
+--3
+SELECT SalesOrderID,  SUM(LineTotal) AS TotalPedido
+FROM  [SalesLT].[SalesOrderDetail] AS d 
+GROUP BY SalesOrderID
+HAVING  SalesOrderID =71885 
+
+-- 4 mucho dinero en pedidios
+SELECT SalesOrderID,  SUM(LineTotal) AS TotalPedido
+FROM  [SalesLT].[SalesOrderDetail] AS d 
+GROUP BY SalesOrderID
+HAVING  SUM(LineTotal) > 50000 
+
+
