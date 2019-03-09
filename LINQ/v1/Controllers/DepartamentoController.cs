@@ -23,19 +23,26 @@ namespace WebMVC1.Controllers
         public ActionResult Index()
         {
             // Empleamos LINQ to Entity
+            // se puede hacer de 2 formas, usando tipo SQL
             IEnumerable<Departamento> resultadosQuery = from dept in deptList
                                                        where dept.Presupuesto > 8000
                                                        select dept;
 
             return View(resultadosQuery);
+
+            // o usando expresiones LAMBDA
             //return View(deptList.Where(dept => dept.Presupuesto > 15000));
+
+
         }
 
-        public ActionResult Create()
+        public ActionResult Details(string id)
         {
-            return View();
+            // Usar LINQ para coger el objeto Dept
+            Departamento dept = deptList.Where(d => d.DeptID == id).FirstOrDefault();
+            return View(dept);
         }
-    
-    
+
+
     }
 }
