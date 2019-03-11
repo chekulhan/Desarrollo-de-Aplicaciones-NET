@@ -20,6 +20,16 @@ namespace MVCBlogs.Controllers
         {
 
 
+            List<SelectListItem> paises = new List<SelectListItem>()
+            {
+                new SelectListItem { Text = "Australia", Value = "AUS" },
+                new SelectListItem { Text = "España", Value = "ESP" },
+                new SelectListItem { Text = "Inglaterra", Value = "ENG" },
+            };
+
+
+            ViewBag.Paises = paises;
+
             var blogs = db.Blogs.Include(Blog => Blog.Posts);
             return View(blogs.ToList());
         }
