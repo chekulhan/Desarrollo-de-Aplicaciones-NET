@@ -1,0 +1,51 @@
+﻿@model IEnumerable<MVCBlogs.Models.Blog>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Url)
+            </th>
+            <th></th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Url)
+            </td>
+            <td>HERE ARE THE POSTS
+                @{
+                    foreach (var p in item.Posts)
+                    {
+                        @p.PostId @:  @p.Title <br />
+                    }
+                }
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.BlogId }) |
+                @Html.ActionLink("Details", "Details", new { id=item.BlogId }) |
+                @Html.ActionLink("Delete", "Delete", new { id=item.BlogId })
+                @Html.ActionLink("Add Post", "Create","Posts", new { id = item.BlogId }, null)
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>
