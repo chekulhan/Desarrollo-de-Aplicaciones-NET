@@ -28,6 +28,10 @@
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => item.Url)
+
+                @Html.DropDownList("paises", (IEnumerable<SelectListItem>)ViewBag.Paises, new { id = "ddlPaises", @class = "form-control" })
+
+
             </td>
             <td>HERE ARE THE POSTS
                 @{
