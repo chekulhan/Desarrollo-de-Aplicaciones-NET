@@ -35,6 +35,8 @@ namespace WebApplication2
 
             try
             {
+		
+		// TRY..CATCH en procedimiento almacenado funciona si NO devolvemos resultados, i.e. ejecutamos cmd.ExecuteNonQuery()
                 
                 dr = cmd.ExecuteReader();
 
