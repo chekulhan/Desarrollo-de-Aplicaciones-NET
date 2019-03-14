@@ -22,8 +22,9 @@ ALTER FUNCTION bco.f_ValidarImporte
 (
 	-- Add the parameters for the function here
 	@IDTitular int,
-	@Importe money -- NOTA: Hace falta para los UPDATEs, si no, el CHECK No va...
+	@Importe money -- NOTA: Hace falta la columna con el valor que se va a modificar para los UPDATEs, si no, el CHECK No va...
 	-- Usar ([bco].[f_ValidarImporte]([IDTitular],[Importe])=(0)) en CHECK
+	-- http://sqlblog.karaszi.com/be-careful-with-constraints-calling-udfs/
 )
 RETURNS  bit
 AS
