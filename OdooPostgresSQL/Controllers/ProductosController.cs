@@ -4,10 +4,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Configuration;
-using System.Data;
 using Npgsql;
 using NpgsqlTypes;
-
+using OdooPostgresSQL.Models;
 
 namespace OdooPostgresSQL.Controllers
 {
@@ -42,6 +41,45 @@ namespace OdooPostgresSQL.Controllers
             return Content(sContent);
 
             //return View();
+        }
+
+
+
+        public ActionResult IndexconModelo()
+        {
+
+            string connStr = ConfigurationManager.ConnectionStrings["OdooPostgres"].ConnectionString;
+
+            List<Producto> productos = new List<Producto>();
+
+            NpgsqlConnection conn = new NpgsqlConnection(connStr);
+            conn.Open();
+
+            NpgsqlCommand cmd = new NpgsqlCommand();
+            cmd.CommandText = "SELECT * FROM product_template;";
+            cmd.CommandType = CommandType.Text;
+            cmd.Connection = conn;
+
+            NpgsqlDataReader dr;
+            dr = cmd.ExecuteReader();
+
+            while (dr.Read())
+            {
+                Producto p = new Producto();
+                p.ID = dr["id"];
+                p.Name = dr["name"].ToString();
+
+                productos.Add(p);
+                
+            }
+
+
+            dr.Close();
+            conn.Close();
+
+            
+
+            return View(productos);
         }
     }
 }
