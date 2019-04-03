@@ -17,7 +17,7 @@ namespace WindowsFormsERPVuelos
     public partial class Form2 : Form
     {
 
-        private string connectionString = @"Data Source = XXXXXXXX";
+        private string connectionString = @"Data Source = XXXXX";
         private SqlConnection conn;
         private DataSet empleadosDS;
         SqlDataAdapter adapter;
@@ -116,6 +116,60 @@ namespace WindowsFormsERPVuelos
 
             RefreshGrid(); // Refrescar grid
 
+        }
+
+        private void btnTransaccion_Click(object sender, EventArgs e)
+        {
+
+            conn.Open();
+
+            SqlTransaction sqlTran = conn.BeginTransaction();
+            
+            try
+            {
+                
+                // Insertar filas y una de ellos producen un error e.g violacion de un CHECK, varchar muy largo
+                DataTable table = empleadosDS.Tables["Empleados"];
+                DataRow rowData;
+
+                rowData = table.NewRow();
+                rowData["Nombre"] = "n5";
+                rowData["Apellido"] = "n5";
+                rowData["Email"] = "Todo bien";
+                table.Rows.Add(rowData);
+
+                // ERROR con datos aqui
+                rowData = table.NewRow();
+                rowData["Nombre"] = "n6"; 
+                rowData["Apellido"] = "n6";
+                rowData["Email"] = "ERROR sobre pasa la logitud .............................................";
+                table.Rows.Add(rowData);
+
+                //Fijate que tenemos que asignar la transaccion al Comando
+                SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                SqlCommand comm = builder.GetInsertCommand();
+                comm.Connection = conn;
+                comm.Transaction = sqlTran; // asignar comando
+                
+
+                adapter.Update(empleadosDS, "Empleados"); 
+
+                sqlTran.Commit();
+            }
+                
+            catch (Exception ex)
+            {
+                Debug.Print(ex.Message.ToString());
+                sqlTran.Rollback();
+            }
+
+            finally
+            {
+                Debug.Print("todo bien");
+                conn.Close();
+            }
+                
+            
         }
     }
 }
