@@ -17,7 +17,7 @@ namespace WindowsFormsERPVuelos
     public partial class ComboBoxExample : Form
     {
 
-        private string connectionString = @"Data Source = XXXXXX";
+        private string connectionString = @"Data Source = 192.168.37.150\segundo150; Initial Catalog = CheDB; User ID = sa; Password = d845hv-2018";
         private SqlConnection conn;
  
 
@@ -25,12 +25,6 @@ namespace WindowsFormsERPVuelos
         public ComboBoxExample()
         {
             InitializeComponent();
-        }
-
-        private void ComboBoxExample_Load(object sender, EventArgs e)
-        {
-            
-          
         }
 
        
@@ -105,6 +99,7 @@ namespace WindowsFormsERPVuelos
 
             SqlDataReader sqlReader = command.ExecuteReader();
 
+            // Este código no funciona, produce error
             BindingSource bs = new BindingSource();
             bs.DataSource = sqlReader;
 
@@ -112,13 +107,17 @@ namespace WindowsFormsERPVuelos
             cboEmpleados3.DisplayMember = "Nombre";
             cboEmpleados3.ValueMember = "IDEmpleado";
 
-           
+
             // Otra opcion es recorrer el SQLDataReader, en este caso tampoco se asigna la propiedad .ValueMember
-            //while (sqlReader.Read())
-            //{
-            //    cboEmpleados3.Items.Add(sqlReader["Nombre"].ToString());
-            //}
+            List<ItemEjemplo> lista = new List<ItemEjemplo>();
+            cboEmpleados3.DisplayMember = "Text";
+            cboEmpleados3.ValueMember = "Value";
             
+            while (sqlReader.Read())
+            {
+                lista.Add(new ItemEjemplo(sqlReader["Nombre"].ToString(),int.Parse(sqlReader["IdEmpleado"].ToString())));
+            }
+            cboEmpleados3.DataSource = lista; // asignar la lista al ComboBox control
   
             sqlReader.Close();
             conn.Close();
@@ -126,7 +125,7 @@ namespace WindowsFormsERPVuelos
 
         private void cboEmpleados3_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Debug.Print(cboEmpleados3.SelectedValue.ToString());
+           Debug.Print(cboEmpleados3.SelectedValue.ToString());
         }
 
         private void btnSQLDataReader2_Click(object sender, EventArgs e)
@@ -178,6 +177,27 @@ namespace WindowsFormsERPVuelos
 
 
             // close conexion
+            conn.Close();
+        }
+
+        private void btnReader3_Click(object sender, EventArgs e)
+        {
+            SqlConnection conn = new SqlConnection(connectionString);
+            string queryString = "SELECT IDEmpleado, Nombre FROM dbo.Empleados";
+
+            SqlCommand command = new SqlCommand(queryString, conn);
+            conn.Open();
+
+            SqlDataReader sqlReader = command.ExecuteReader();
+
+            BindingSource bs = new BindingSource();
+            bs.DataSource = sqlReader;
+
+            cboEmpleados3.DataSource = bs;
+            cboEmpleados3.DisplayMember = "Nombre";
+            cboEmpleados3.ValueMember = "IDEmpleado";
+
+            sqlReader.Close();
             conn.Close();
         }
     }
