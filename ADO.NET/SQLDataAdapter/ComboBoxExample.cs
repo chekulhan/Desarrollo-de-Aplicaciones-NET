@@ -17,18 +17,16 @@ namespace WindowsFormsERPVuelos
     public partial class ComboBoxExample : Form
     {
 
-        private string connectionString = @"Data Source = 192.168.37.150\segundo150; Initial Catalog = CheDB; User ID = sa; Password = d845hv-2018";
+        private string connectionString = @"Data Source = XXXXXXX";
         private SqlConnection conn;
  
-
 
         public ComboBoxExample()
         {
             InitializeComponent();
         }
 
-       
-
+      
         private void btnBindCombo_Click(object sender, EventArgs e)
         {
             // cargar el combobox con datos usando SQLDataAdapter
@@ -55,6 +53,7 @@ namespace WindowsFormsERPVuelos
         {
 
             // dos ejemplos usando un BindingSource con diferentes fuentes de datos
+            // Ejemplo 1:
             BindingSource bs = new BindingSource();
 
             List<string> data = new List<string>
@@ -64,10 +63,10 @@ namespace WindowsFormsERPVuelos
                 "Item 3"
             };
 
-            //bs.DataSource = dataDict;
-            //cboEmpleados2.DataSource = bs;
+            bs.DataSource = dataDict;
+            cboEmpleados2.DataSource = bs;
 
-
+            // Ejemplo 2: Diccionario
             Dictionary<int, string> dataDict = new Dictionary<int, string>();
             dataDict.Add(1, "Item 1");
             dataDict.Add(2, "Item 2");
@@ -99,15 +98,7 @@ namespace WindowsFormsERPVuelos
 
             SqlDataReader sqlReader = command.ExecuteReader();
 
-            // Este código no funciona, produce error
-            BindingSource bs = new BindingSource();
-            bs.DataSource = sqlReader;
-
-            cboEmpleados3.DataSource = bs;
-            cboEmpleados3.DisplayMember = "Nombre";
-            cboEmpleados3.ValueMember = "IDEmpleado";
-
-
+   
             // Otra opcion es recorrer el SQLDataReader, en este caso tampoco se asigna la propiedad .ValueMember
             List<ItemEjemplo> lista = new List<ItemEjemplo>();
             cboEmpleados3.DisplayMember = "Text";
@@ -123,6 +114,8 @@ namespace WindowsFormsERPVuelos
             conn.Close();
         }
 
+        // IMPORTANTE: Evento SelectedIndexChanged() dispara al cargar los datos de la base de datos (i.e. al asignar DataSource y ValueMember, ...)
+        // Usar evento SelectionChangeCommitted() dispara evento al click de Usuario
         private void cboEmpleados3_SelectedIndexChanged(object sender, EventArgs e)
         {
            Debug.Print(cboEmpleados3.SelectedValue.ToString());
