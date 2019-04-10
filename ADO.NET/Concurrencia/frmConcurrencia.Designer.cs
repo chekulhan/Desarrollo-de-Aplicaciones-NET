@@ -35,6 +35,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.btnActualizar = new System.Windows.Forms.Button();
+            this.txtProfesorID = new System.Windows.Forms.TextBox();
+            this.txtCiudad = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btnActualizarconConcurrencia = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProfesores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -48,9 +53,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(259, 34);
+            this.button1.Location = new System.Drawing.Point(544, 20);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(115, 40);
+            this.button1.Size = new System.Drawing.Size(115, 47);
             this.button1.TabIndex = 1;
             this.button1.Text = "Ejecutar una consulta de UPDATE";
             this.button1.UseVisualStyleBackColor = true;
@@ -64,16 +69,15 @@
             this.label1.Size = new System.Drawing.Size(211, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Paso 1: Ejecutar una consulta con el boton";
-
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(42, 63);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(168, 13);
+            this.label2.Size = new System.Drawing.Size(258, 13);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Paso 2: Cambiar la ciudad de ID 1";
+            this.label2.Text = "Paso 2: Cambiar la ciudad del Profesor en el dataGrid";
             // 
             // label3
             // 
@@ -104,11 +108,58 @@
             this.btnActualizar.UseVisualStyleBackColor = true;
             this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
+            // txtProfesorID
+            // 
+            this.txtProfesorID.Location = new System.Drawing.Point(429, 20);
+            this.txtProfesorID.Name = "txtProfesorID";
+            this.txtProfesorID.Size = new System.Drawing.Size(100, 20);
+            this.txtProfesorID.TabIndex = 7;
+            // 
+            // txtCiudad
+            // 
+            this.txtCiudad.Location = new System.Drawing.Point(429, 47);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(100, 20);
+            this.txtCiudad.TabIndex = 8;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(363, 23);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(60, 13);
+            this.label5.TabIndex = 9;
+            this.label5.Text = "ID Profesor";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(381, 53);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(40, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Cuidad";
+            // 
+            // btnActualizarconConcurrencia
+            // 
+            this.btnActualizarconConcurrencia.Location = new System.Drawing.Point(544, 211);
+            this.btnActualizarconConcurrencia.Name = "btnActualizarconConcurrencia";
+            this.btnActualizarconConcurrencia.Size = new System.Drawing.Size(128, 38);
+            this.btnActualizarconConcurrencia.TabIndex = 11;
+            this.btnActualizarconConcurrencia.Text = "Actualizar con Concurrencia";
+            this.btnActualizarconConcurrencia.UseVisualStyleBackColor = true;
+            this.btnActualizarconConcurrencia.Click += new System.EventHandler(this.btnActualizarconConcurrencia_Click);
+            // 
             // frmConcurrencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 261);
+            this.Controls.Add(this.btnActualizarconConcurrencia);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.txtProfesorID);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -134,5 +185,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.TextBox txtProfesorID;
+        private System.Windows.Forms.TextBox txtCiudad;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btnActualizarconConcurrencia;
     }
 }

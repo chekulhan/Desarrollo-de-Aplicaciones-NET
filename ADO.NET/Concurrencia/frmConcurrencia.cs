@@ -8,12 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Diagnostics;
 
 namespace WindowsFormsERPVuelos
 {
     public partial class frmConcurrencia : Form
     {
-        private string connectionString = @"Data Source = XXXXX";
+        private string connectionString = @"Data Source = XXXXXX";
         private SqlConnection conn;
         private DataSet profesoresDS;
         SqlDataAdapter adapter;
@@ -45,9 +46,11 @@ namespace WindowsFormsERPVuelos
         {
 
             conn.Open();
-            SqlCommand cmd = new SqlCommand("UPDATE cole.profesores SET Ciudad = 'Donosti' WHERE ID = 1", conn);
+            SqlCommand cmd = new SqlCommand("UPDATE cole.profesores SET Ciudad = @Ciudad WHERE ID = @IDProfesor", conn);
             cmd.CommandType = CommandType.Text;
-            
+            cmd.Parameters.AddWithValue("@IDProfesor", int.Parse(txtProfesorID.Text));
+            cmd.Parameters.AddWithValue("@Ciudad", txtCiudad.Text);
+
             // Ejecutar el procedimiento 
             cmd.ExecuteNonQuery();
 
@@ -60,6 +63,19 @@ namespace WindowsFormsERPVuelos
         {
             SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
             adapter.Update(profesoresDS.Tables["Profesores"]);
+        }
+
+        private void btnActualizarconConcurrencia_Click(object sender, EventArgs e)
+        {
+            // Implementar un TRY CATCH y mostrar un mensaje de error para el usuario
+            // Por defecto, el objeto SQLDataAdapter usa concurrencia optimista 
+
+    
+            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+            adapter.Update(profesoresDS.Tables["Profesores"]);
+           
+            
+
         }
     }
 }
