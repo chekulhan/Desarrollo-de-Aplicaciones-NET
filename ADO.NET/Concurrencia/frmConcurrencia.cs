@@ -14,7 +14,7 @@ namespace WindowsFormsERPVuelos
 {
     public partial class frmConcurrencia : Form
     {
-        private string connectionString = @"Data Source = XXXXXX";
+        private string connectionString = @"Data Source = XXXXX";
         private SqlConnection conn;
         private DataSet profesoresDS;
         SqlDataAdapter adapter;
@@ -39,7 +39,10 @@ namespace WindowsFormsERPVuelos
 
             dataGridProfesores.DataSource = profesoresDS.Tables["Profesores"];
 
-            
+            // Añadir esta linea al usar el timestamp para implementar concurrencia optimista
+            dataGridProfesores.Columns["CurrentTimeStamp"].Visible = false;
+
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -70,12 +73,50 @@ namespace WindowsFormsERPVuelos
             // Implementar un TRY CATCH y mostrar un mensaje de error para el usuario
             // Por defecto, el objeto SQLDataAdapter usa concurrencia optimista 
 
-    
-            SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
-            adapter.Update(profesoresDS.Tables["Profesores"]);
-           
+            try
+            {
+                SqlCommandBuilder builder = new SqlCommandBuilder(adapter);
+                adapter.Update(profesoresDS.Tables["Profesores"]);
+            }
+            catch (DBConcurrencyException ex)
+            {
+                DialogResult result;
+
+
+                result = MessageBox.Show("Ha habido un error al actualizar datos - " + ex.Message);
+                Debug.Print(ex.Message);
+                
+            }
             
 
+        }
+
+        private void btnTimeStamp_Click(object sender, EventArgs e)
+        {
+            // Profe: ver respuesta en PLANNING doc
+
+            // De momento, esta función sobrescribe los datos de otros usuarios, que no esta bien
+            // Objetivo: Implementar concurrencia optimista a traves del timestamp (base de datos)
+
+            // Alumno: Cambiar consulta para comprar version de CurrentTimeStamp
+            SqlCommand cmd = new SqlCommand("UPDATE cole.profesores SET Ciudad = @Ciudad WHERE ID = @ID", conn);
+
+            cmd.CommandType = CommandType.Text;
+          
+
+            cmd.Parameters.Add("@ID", SqlDbType.Int, 0, "ID");
+            cmd.Parameters["@ID"].SourceVersion = DataRowVersion.Original;
+
+            // Alumno: Añadir parámetero de CurrentTimeStamp
+            
+
+            cmd.Parameters.Add("@Ciudad", SqlDbType.NVarChar, 50, "Ciudad"); // Nombre es la fuente de Columna 
+
+
+ 
+            adapter.UpdateCommand = cmd;
+            int rowsAffected = adapter.Update(profesoresDS, "Profesores");
+            Debug.Print(rowsAffected.ToString());
         }
     }
 }

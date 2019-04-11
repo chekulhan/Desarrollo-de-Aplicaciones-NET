@@ -40,6 +40,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.btnActualizarconConcurrencia = new System.Windows.Forms.Button();
+            this.btnTimeStamp = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridProfesores)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(544, 110);
+            this.btnActualizar.Location = new System.Drawing.Point(544, 99);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(128, 31);
             this.btnActualizar.TabIndex = 6;
@@ -142,7 +143,7 @@
             // 
             // btnActualizarconConcurrencia
             // 
-            this.btnActualizarconConcurrencia.Location = new System.Drawing.Point(544, 211);
+            this.btnActualizarconConcurrencia.Location = new System.Drawing.Point(544, 159);
             this.btnActualizarconConcurrencia.Name = "btnActualizarconConcurrencia";
             this.btnActualizarconConcurrencia.Size = new System.Drawing.Size(128, 38);
             this.btnActualizarconConcurrencia.TabIndex = 11;
@@ -150,11 +151,22 @@
             this.btnActualizarconConcurrencia.UseVisualStyleBackColor = true;
             this.btnActualizarconConcurrencia.Click += new System.EventHandler(this.btnActualizarconConcurrencia_Click);
             // 
+            // btnTimeStamp
+            // 
+            this.btnTimeStamp.Location = new System.Drawing.Point(544, 204);
+            this.btnTimeStamp.Name = "btnTimeStamp";
+            this.btnTimeStamp.Size = new System.Drawing.Size(128, 45);
+            this.btnTimeStamp.TabIndex = 12;
+            this.btnTimeStamp.Text = "Actualizar con TimeStamp";
+            this.btnTimeStamp.UseVisualStyleBackColor = true;
+            this.btnTimeStamp.Click += new System.EventHandler(this.btnTimeStamp_Click);
+            // 
             // frmConcurrencia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(743, 261);
+            this.Controls.Add(this.btnTimeStamp);
             this.Controls.Add(this.btnActualizarconConcurrencia);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -190,5 +202,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnActualizarconConcurrencia;
+        private System.Windows.Forms.Button btnTimeStamp;
     }
 }
