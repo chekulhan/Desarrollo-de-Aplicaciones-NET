@@ -10,7 +10,7 @@ namespace WebNCapas.BLL
 {
     public class ProductoMgr
     {
-        private string connectionString = @"Data Source = 192.168.37.150\segundo150;Initial Catalog = CheDB; User ID = sa; Password=d845hv-2018;";
+        private string connectionString = @"Data Source = XXXXXX";
 
         public bool InsertProducto(Producto p)
         {
