@@ -10,7 +10,7 @@ namespace WebNCapas.BLL
         private string nombre;
         
 
-        public int ID { get; set; }
+        public int ProductoID { get; set; }
         public string Nombre
         {
             get {  return nombre.ToUpper();  }
@@ -22,7 +22,22 @@ namespace WebNCapas.BLL
         {
             get { return Nombre + " - " + Detalles; }
         }
-        public double Precio { get; set; }
+
+        public decimal Precio { get; set; }
+
+        // Se podria implementar la logica de negocios aqui...pero seria mejor en otro evento
+        //public decimal Precio
+        //{
+        //    get { return precio; }
+        //    set
+        //    {
+        //        if (precio < 10)
+        //            throw new ArgumentOutOfRangeException(nameof(Precio), "Precio no puede ser menos de 10 euros");
+        //        else
+        //            precio = value; 
+        //    }
+        //}
+
         public string Foto { get; set; }
         public bool Disponible { get; set; }
             
