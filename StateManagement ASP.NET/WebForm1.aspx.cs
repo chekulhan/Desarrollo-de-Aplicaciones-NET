@@ -14,6 +14,26 @@ namespace GestiondeEstado
             Page.Title = Application["AppMsg"].ToString();
             lblApp.Text = Application["AppMsg"].ToString();
             lblMsg.Text = Application["users"].ToString();
+
+
+            // actividad ViewState
+            if (IsPostBack == false) { // establecer como 0 al principio
+                ViewState["counter"] = 0;
+                lblCounter.Text = ViewState["counter"].ToString();
+            }
+    }
+
+        protected void btnIncrement_Click(object sender, EventArgs e)
+        {
+            // Usando ViewState
+            if (ViewState["counter"] != null)
+            {
+                ViewState["counter"] =(int) ViewState["counter"] + 1;
+                lblCounter.Text = ViewState["counter"].ToString();
+            }
+                
         }
+
+       
     }
 }

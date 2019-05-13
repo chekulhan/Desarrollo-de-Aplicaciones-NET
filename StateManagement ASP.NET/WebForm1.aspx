@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="GestiondeEstado.WebForm1" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="GestiondeEstado.WebForm1" EnableViewState="true" %>
 
 <!DOCTYPE html>
 
@@ -12,6 +12,11 @@
         <div>
             <h1><asp:Label ID="lblApp" runat="server" Text="Label"></asp:Label></h1>
             Usuarios Conectados<asp:Label ID="lblMsg" runat="server" Text="Label"></asp:Label>
+        </div>
+
+        <div>
+        Contar Clicks<asp:Label ID="lblCounter" runat="server" />
+            <asp:Button ID="btnIncrement" runat="server" Text="Contar" onclick="btnIncrement_Click" />
         </div>
     </form>
 </body>
