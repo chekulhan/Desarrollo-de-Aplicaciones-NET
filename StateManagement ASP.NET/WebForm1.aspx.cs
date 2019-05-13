@@ -11,6 +11,7 @@ namespace GestiondeEstado
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            Page.Title = Application["AppMsg"].ToString();
             lblApp.Text = Application["AppMsg"].ToString();
             lblMsg.Text = Application["users"].ToString();
         }
