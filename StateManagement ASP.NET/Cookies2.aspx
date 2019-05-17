@@ -13,6 +13,8 @@
         <div>
             <asp:Label ID="lblResultado" runat="server" Text="Label"></asp:Label>
         </div>
+
+        <div runat="server" id="mydiv">DIV paa cambiar el color</div>
     </form>
 </body>
 </html>

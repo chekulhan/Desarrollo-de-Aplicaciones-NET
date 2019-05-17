@@ -18,7 +18,10 @@ namespace GestiondeEstado
             {
                 
                 lblResultado.Text = cookie["color"].ToString();
-                
+
+                //mybody.Attributes.Add("bgcolor", cookie["color"]); // cambiar color de BODY tag
+                mydiv.Style.Add("background-color", cookie["color"]);// cambiar color de DIV
+
                 Label label = (Label)Page.FindControl("lblColor");
                 if (label != null)
                 {
