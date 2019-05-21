@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<DvdList>
+  <DVD ID="1" Category="Category 1">
+    <Title>title 1</Title>
+    <Director>directory 2</Director>
+    <Price>1</Price>
+    <Starring>
+      <Star>star 1</Star>
+      <Star>star 2</Star>
+    </Starring>
+  </DVD>
+  <DVD ID="2" Category="Category 2">
+    <Title>title 2</Title>
+    <Director>directory 2</Director>
+    <Price>2</Price>
+    <Starring>
+      <Star>star 3</Star>
+      <Star>star 4</Star>
+    </Starring>
+  </DVD>
+</DvdList>
