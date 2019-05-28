@@ -1,0 +1,44 @@
+// Para uso con Fiddle
+// HTML
+
+<h1>Conversor de divisas</h1>
+De Euro a:
+ <select id="cambioa">
+  <option value="CAD">Canada</option>
+  <option value="GDP">Libras</option>
+  <option value="AUD">Australian Dollar</option>
+  <option value="BRL">Brazil</option>
+</select>
+
+<div id="resultado">
+
+</div>
+<button type="button" onclick="GetCambios()">Get</button>
+
+
+
+// Javascript
+
+function GetCambios() {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      
+
+      var JSONrates = JSON.parse(this.responseText);
+      
+      document.getElementById("resultado").innerHTML =JSONrates.rates[cambioa];
+      
+    }
+  };
+  
+  var cambioa = document.getElementById('cambioa').value;
+  
+  var URL = 'https://api.exchangeratesapi.io/latest?symbols=' + cambioa;
+
+  alert(URL);
+  
+  xhttp.open("GET", URL, true);
+  xhttp.send();
+}
