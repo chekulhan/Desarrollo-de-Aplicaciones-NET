@@ -1,0 +1,71 @@
+{ "title": "Post de Microsoft",
+    "description": "Microsoft tiene un NOSQL base de datos ",
+    "tags": [
+        "microsoft",
+        "database",
+        "NoSQL"
+    ],
+    "likes": 10,
+    "comments": [
+        {
+            "user": "user1",
+            "message": "My first comment",
+            "dateCreated": "12/2/2010",
+            "like": 0
+        },
+        {
+            "user": "user2",
+            "message": "My second comment",
+            "dateCreated": "19/6/2222",
+            "like": 0
+        }
+      ]
+}
+
+{ "title": "Post de MongoDB",
+    "description": "MongoDB tiene un NOSQL base de datos ",
+    "tags": [
+        "mongodb",
+        "database",
+        "NoSQL"
+    ],
+    "likes": 200,
+    "comments": [
+        {
+            "user": "user2",
+            "message": "My second comment",
+            "dateCreated": "19/6/2222",
+            "like": 0
+        }
+      ]
+}
+
+{ "title": "Post de Google",
+    "description": "Google tiene un NOSQL base de datos ",
+    "tags": [
+        "google",
+        "database",
+        "NoSQL"
+    ],
+    "likes": 250,
+    "comments": [
+        {
+            "user": "user1",
+            "message": "My first comment",
+            "dateCreated": "12/2/2010",
+            "like": 0
+        },
+        {
+            "user": "user4",
+            "message": "My first comment",
+            "dateCreated": "12/2/2010",
+            "like": 0
+        },
+        {
+            "user": "user2",
+            "message": "My second comment",
+            "dateCreated": "19/6/2222",
+            "like": 0
+        }
+      ]
+}
