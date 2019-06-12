@@ -1,0 +1,74 @@
+﻿
+@{
+    Layout = null; //"~/Views/Shared/_Layout.cshtml";
+}
+@using ShoppingCart.Models;
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title></title>
+</head>
+<body>
+   Shopping Cart
+    <table class="table">
+        <tr>
+            <th>
+                Product ID
+            </th>
+            <th>
+                Product Name
+            </th>
+         
+            <th>Quantity</th>
+            <th></th>
+        </tr>
+
+        @if (Session["shoppingcart"] != null) {
+
+
+            foreach (var item in (List<Item>)Session["shoppingcart"])
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producto.Id)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Producto.Nombre)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.Quantity)
+                </td>
+                <td>
+                    <a href="@Url.Action("Remove", "Cart", new { id = item.Producto.Id })">Remove</a>
+                </td>
+            </tr>
+
+            }
+
+            <tr>
+                <td align="right" colspan="6">Sum</td>
+                <td>
+                    @{
+                        List<Item> carts = (List<Item>)Session["shoppingcart"];
+                        var total = carts.Sum(item => item.Producto.Precio * item.Quantity);
+                    }
+
+                    @total
+                </td>
+            </tr>
+
+                        }
+
+
+    </table>
+
+
+    
+
+
+</body>
+</html>
