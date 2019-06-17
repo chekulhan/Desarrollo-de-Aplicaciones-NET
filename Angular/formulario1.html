@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+//    angular.module('myApp', [])
+//         .controller('CtrlForm', function() {
+//             this.username = "";
+//             this.password = "";
+//             this.change = function() {
+//                 console.log('User clicked submit with ', this.username, this.password);
+//             };
+           
+//         });
+    
+    angular.module('myApp', [])
+        .controller('CtrlForm', function() {
+            this.username = "";
+            this.password = "";
+            this.change = function() {
+                console.log('User clicked submit with ', this.username, this.password);
+            };
+            this.submit = function() {
+                console.log('User clicked submit with ', this.username, this.password);
+            };
+        
+           
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" >
+
+    
+    <h1>Forms</h1>
+    <div ng-controller="CtrlForm as ctrl">
+        <form ng-submit="ctrl.submit()" name="MyForm1">
+            Username <input type="text" ng-model="ctrl.username">
+            Password <input type="text" ng-model="ctrl.password">
+            <input type="submit" value="Submit">
+            <input type="button" ng-click="ctrl.change()" value="Go">
+        </form>
+    </div>  
+    
+    <h1>Forms Validation</h1>
+    <p>Añadir required validation de HTML5</p>
+    <div ng-controller="CtrlForm as ctrl">
+        <form ng-submit="ctrl.submit()" name="MyForm2">
+            Username <input type="text" ng-model="ctrl.username">
+            Password <input type="text" ng-model="ctrl.password" required ng-minlength="4">
+            <input type="submit" value="Submit" ng-disabled="MyForm2.$invalid">
+           
+        </form>
+    </div>  
+
+</body>
+
+
+</html>
