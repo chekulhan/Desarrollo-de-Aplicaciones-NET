@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+   angular.module('myApp', [])
+        .controller('MainCtrl', function() {
+            // Controller-specific code goes here
+            this.notas = [1, 2, 4, 6, 3, 5];
+            this.nombres =["Juan", "Maria", "Jose"];
+            this.notasnombres=[{nombre: 'Juan', nota:1}, {nombre:'Maria', nota:8}]
+        });
+
+    </script>
+</head>
+
+<body >
+    Notas
+    <div ng-app="myApp" ng-controller="MainCtrl as ctrl">
+       <div ng-repeat="nota in ctrl.notas">
+             {{nota}}
+       </div>   
+       <br>Nombres
+       <div ng-repeat="nombre in ctrl.nombres">
+        {{nombre}}
+        </div>   
+        <br>Notas y Nombres
+        <div ng-repeat="x in ctrl.notasnombres">
+            {{x.nombre}} y su nota es: {{x.nota}}
+            <span ng-bind="x.nota"></span> 
+        </div>  
+        NOTA: ng-bind funciona mejor (rendimiento) que <span ng-non-bindable>{{}}</span>
+        
+       
+    </div>
+
+</body>
+
+
+</html>
