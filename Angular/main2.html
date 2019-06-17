@@ -35,6 +35,30 @@
         </div>  
         NOTA: ng-bind funciona mejor (rendimiento) que <span ng-non-bindable>{{}}</span>
         
+        <br>Variables del AngularJS repeater:
+        <div ng-repeat="x in ctrl.notasnombres">
+            <div>First Element: {{$first}}</div>
+            <div>Middle Element: {{$middle}}</div>
+            <div>Last Element: {{$last}}</div>
+            <div>Index of Element: {{$index}}</div>
+            <div>At Even Position: {{$even}}</div>
+            <div>At Odd Position: {{$odd}}</div> 
+        </div>  
+
+        <ul>
+            <li ng-repeat="x in ctrl.notasnombres"><span ng-bind="x.nombre"></span></li>
+        </ul>
+        
+
+        <table border="1">
+            <tr ng-repeat="x in ctrl.notasnombres">
+                <td>{{x.nombre}}</td>
+                <td>{{x.nota}}</td>
+            </tr>
+           
+        </table>
+
+                
        
     </div>
 
