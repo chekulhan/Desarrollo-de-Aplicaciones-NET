@@ -8,15 +8,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script>
-//    angular.module('myApp', [])
-//         .controller('CtrlForm', function() {
-//             this.username = "";
-//             this.password = "";
-//             this.change = function() {
-//                 console.log('User clicked submit with ', this.username, this.password);
-//             };
-           
-//         });
     
     angular.module('myApp', [])
         .controller('CtrlForm', function() {
@@ -28,7 +19,6 @@
             this.submit = function() {
                 console.log('User clicked submit with ', this.username, this.password);
             };
-        
            
         });
     </script>
@@ -36,7 +26,6 @@
 
 <body ng-app="myApp" >
 
-    
     <h1>Forms</h1>
     <div ng-controller="CtrlForm as ctrl">
         <form ng-submit="ctrl.submit()" name="MyForm1">
@@ -48,7 +37,7 @@
     </div>  
     
     <h1>Forms Validation</h1>
-    <p>Añadir required validation de HTML5</p>
+    <p>Añadir validation y required validation de HTML5</p>
     <div ng-controller="CtrlForm as ctrl">
         <form ng-submit="ctrl.submit()" name="MyForm2">
             Username <input type="text" ng-model="ctrl.username">
@@ -59,6 +48,5 @@
     </div>  
 
 </body>
-
 
 </html>
