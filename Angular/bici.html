@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bici Proyecto</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+   angular.module('myApp', [])
+        .controller('CtrlBici', function() {
+            this.nombre = "Bicicleta Mountain Biki";
+            this.codigo = "BEP-44";
+            this.descripcion = "Con la Mountain Bike Safari BEP-44 podrás realizar cualquier tipo de viaje por cualquier terreno. Una bicicleta sensacional, ligera";
+            this.precio = 144;
+            this.gastos = 13.92;
+            this.imagen = "bici.jpg"
+        });
+
+    </script>
+</head>
+
+<body ng-app="myApp" >
+    <h1>Bicicleta</h1>
+    <div ng-controller="CtrlBici as ctrl">
+      <table border="1">
+            <tr>
+                <td colspan="5"></td>
+                <td>Codigo</td>
+                <td>Nombre</td>
+                <td>Descripcion</td>
+                <td>Precio</td>
+                <td>Gastos de Envio</td>
+            </tr>
+            <tr>
+                <td colspan="5"><img ng-src={{ctrl.imagen}} alt="" width="200" height="200"></td>
+                <td><span ng-bind="ctrl.codigo"></span></td>
+                <td><span ng-bind="ctrl.nombre"></span></td>
+                <td><span ng-bind="ctrl.descripcion"></span></td>
+                <td><span ng-bind="ctrl.precio"></span></td>
+                <td><span ng-bind="ctrl.gastos"></span></td>
+            </tr>
+      </table>
+ 
+    </div>  
+    
+</div>
+
+</body>
+
+
+</html>
