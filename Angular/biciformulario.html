@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bici Proyecto</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+   angular.module('myApp', [])
+        .controller('CtrlBici', function() {
+            this.nombre = "Bicicleta Mountain Biki";
+            this.codigo = "BEP-44";
+            this.descripcion = "Con la Mountain Bike Safari BEP-44 podrás realizar cualquier tipo de viaje ....";
+            this.precio = 144;
+            this.gastos = 13.92;
+            this.imagen = "bici.jpg";
+
+            this.change = function() {
+                console.log('User clicked submit with ', this.nombre, this.codigo);
+            };
+           
+        });
+
+    
+
+    </script>
+</head>
+
+<body ng-app="myApp" >
+
+    NOT FINISHED
+    <h1>Bicicleta</h1>
+    <div ng-controller="CtrlBici as ctrl">
+       Codigo <input type="text" ng-model="ctrl.codigo">
+       Nombre <input type="text" ng-model="ctrl.nombre">
+       Descr <input type="text" ng-model="ctrl.descripcion"> 
+       Precio <input type="text" ng-model="ctrl.precio"> 
+       Gastos <input type="text" ng-model="ctrl.gastos"> 
+       <button ng-click="ctrl.change()">Cambiar Valores</button>
+       <button ng-click="count = count + 1" ng-init="count=0">OK</button>{{count}}
+    </div>  
+    
+</div>
+
+</body>
+
+
+</html>
