@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+    
+    angular.module('myApp', [])
+        .controller('CtrlForm', function() {
+            this.username = "";
+            this.password = "";
+            this.change = function() {
+                console.log('User clicked submit with ', this.username, this.password);
+            };
+            this.submit = function() {
+                console.log('User clicked submit with ', this.username, this.password);
+            };
+           
+        });
+    </script>
+</head>
+
+<body ng-app="myApp" >
+
+    <h1>Forms Validation</h1>
+    <p>OJO - hemos añadido un atributo <i>name</i> a cada control de input</p>
+    <div ng-controller="CtrlForm as ctrl">
+        <form ng-submit="ctrl.submit()" name="MyForm1">
+            Username <input type="text" ng-model="ctrl.username" name="uname" required>
+            <span ng-show="MyForm1.uname.$invalid">This field is invalid </span>
+            Password <input type="text" ng-model="ctrl.password" name="pwd" required ng-minlength="4">
+            <span ng-show="MyForm1.pwd.$error.minlength">Minimum length required is 4</span>
+            <span ng-show="MyForm1.pwd.$error.required">This field is invalid</span>
+               
+            <input type="submit" value="Submit" ng-disabled="MyForm1.$invalid">
+        </form>
+    </div>  
+
+    <h1>Forms Validation</h1>
+    <p>Los estados ($invalid, $pristine, ...) devuelven booleanos, asi que puedas ocultar/mostrar/habilitar controles según su estado</p>
+    <div ng-controller="CtrlForm as ctrl">
+        <form ng-submit="ctrl.submit()" name="MyForm2">
+            Username <input type="text" ng-model="ctrl.username" required>
+            Password <input type="text" ng-model="ctrl.password" required ng-minlength="4">
+            <span ng-show="MyForm2.$valid">The form is valid</span>
+            <input type="submit" value="Submit" ng-disabled="MyForm2.$invalid">
+            <input type="reset" value="Reset" ng-disabled="MyForm2.$pristine">
+        </form>
+    </div>  
+
+
+
+</body>
+
+</html>
