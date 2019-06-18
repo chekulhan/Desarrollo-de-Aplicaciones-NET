@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+    var postApp = angular.module('biciApp', []);
+    
+    postApp.controller('biciCtrl', function($scope) {
+        $scope.bicis = ["Bici1", "Bici2", "Bici3"]; 
+     
+        $scope.addItem = function() {
+            console.log("adding bici");
+            $scope.bicis.push($scope.nombre)
+        };  
+        $scope.removeItem = function(index) {
+            console.log("removing bici");
+            $scope.bicis.splice(index, 1)
+        };  
+    });
+
+    </script>
+</head>
+
+
+ <body ng-app="biciApp" >
+
+    <h1>Bicicletas </h1>
+   
+    <div ng-controller="biciCtrl">
+        <ul>
+            <li ng-repeat="bici in bicis">{{bici}}
+                    <span ng-click="removeItem($index)">×</span>
+            </li>
+        </ul>
+
+
+        <div>
+            <label>nombre</label>
+            <input type="text" name="nombre" ng-model="nombre">
+        </div>
+        <button type="button" ng-click="addItem()">Add</button>
+
+</div> 
+</body>
+
+</html>
