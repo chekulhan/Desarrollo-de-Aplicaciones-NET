@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+    var postApp = angular.module('myApp', []);
+    
+    postApp.controller('myCtrl', function($scope) {
+      $scope.user = {}; // definir un objeto para almacenar los datos del formulario. 
+      // en este caso, no hace falta definir cada atribito aqui, solo en el formulario ng-model=user.xxx
+      $scope.submitForm = function() {
+            console.log("sending ",  $scope.user )
+        };
+    });
+
+    </script>
+</head>
+   
+
+ <body ng-app="myApp" >
+
+    <h1>Formulario </h1>
+
+    <div ng-controller="myCtrl">
+    <form name="userForm" ng-submit="submitForm()">
+            <div >
+                <label>nombre</label>
+                <input type="text" name="nombre" ng-model="user.nombre">
+            </div>
+            <div >
+                <label>apellido</label>
+                <input type="text" name="apellido"  ng-model="user.apellido">
+            </div>
+            <div >
+                    <label>edad</label>
+                    <input type="text" name="edad"  ng-model="user.edad">
+                </div>
+   
+            <button type="submit">Submit</button>
+    </form>
+</div> 
+</body>
+
+</html>
