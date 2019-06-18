@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    <style>
+        table, th, td {
+            border: 1px solid grey;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+        table tr:nth-child(odd) {
+            background-color: #f1f1f1;
+        }
+        table tr:nth-child(even) {
+            background-color: #ffffff;
+        }
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+  
+        angular.module('myApp', [])
+            .controller('myCtrl', ['$http', function($http) {
+            var self = this; // no funciona si no pasamos this a una variable
+            self.items = [];
+            $http({
+          method  : 'GET',
+          url     : 'http://localhost:59672/api/Personas',
+          headers : { 'Access-Control-Allow-Origin': '*' } 
+             }).then(function(response) {
+                self.items = response.data;
+                }, function(errResponse) {
+                console.error('Error while fetching datos');
+            });
+            }]);
+
+    </script>
+</head>
+
+<body ng-app="myApp" >
+
+    <h1>Datos de un servicio web de ASP.NET</h1>
+    <p>Hay que habilitar CORS en el servicio web - Access-Control-Allow-Origin</p>    
+    <div ng-controller="myCtrl as ctrl">
+        <span>{{ctrl.items}}</span>
+        <table>
+        <tr ng-repeat="x in ctrl.items">
+            <td>{{ x.ID }}</td>
+            <td>{{ x.Nombre }}</td>
+            <td>{{ x.Apellido }}</td>
+        </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
