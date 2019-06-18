@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script>
+    var postApp = angular.module('postApp', []);
+    
+    postApp.controller('postController', function($scope, $http) {
+      $scope.user = {}; // definir objeto para enviar con datos de JSON del formulario
+      $scope.response = "";
+        $scope.submitForm = function() {
+        $http({
+          method  : 'POST',
+          url     : 'https://jsonplaceholder.typicode.com/posts/',
+          data    : $scope.user,
+          headers : { 'Content-Type': 'application/x-www-form-urlencoded' } 
+         }).then(function mySuccess(response) {
+            $scope.response = "Respuesta recibida: " + JSON.stringify(response.data);
+            }, function myError(response) {
+                console.log("error: " + data.message) ;
+            });
+
+        };
+    });
+
+    </script>
+</head>
+
+
+ <body ng-app="postApp" >
+
+    <h1>POST HTTP servicio </h1>
+    <p>https://jsonplaceholder.typicode.com/posts/</p>
+    <p>
+              title: 'foo',
+              body: 'bar',
+              userId: 1
+ 
+        </p>
+
+
+    <h1>Datos de Post</h1>   
+    <div ng-controller="postController">
+    <form name="userForm" ng-submit="submitForm()">
+            <div class="form-group">
+                <label>title</label>
+                <input type="text" name="title" ng-model="user.title">
+                
+            </div>
+            <div class="form-group">
+                <label>body</label>
+                <input type="text" name="body"  ng-model="user.body">
+               
+            </div>
+            <div class="form-group">
+                <label>userId</label>
+                <input type="text" name="userId"  ng-model="user.userId">
+               
+            </div>
+            <button type="submit">Submit</button>
+            Respuesta del servicio web:<span ng-bind="response"></span>
+    </form>
+</div> 
+</body>
+
+</html>
