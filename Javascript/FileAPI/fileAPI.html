@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+    // Mostrar los nombres de multiple archivos seleccionados
+    function getFile() {
+
+        var inputField = document.getElementById('ficheros');
+        
+        for (let index = 0; index < inputField.files.length; index++) {
+            console.log(inputField.files[index].name);
+        }
+
+    }
+   
+    </script>
+</head>
+
+<body>
+    <input type="file" id="ficheros" name="ficheros" multiple>
+    <button type="button" onclick="getFile()">Ver fichero</button>
+</body>
+</html>
