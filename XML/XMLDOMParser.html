@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<p id="demo"></p>
+
+    <script>
+
+    function ParseXML() {
+             var text, parser, xmlDoc;
+    
+        text = "<bookstore><book>" +
+        "<title>Everyday Italian</title>" +
+        "<author>Giada De Laurentiis</author>" +
+        "<year>2005</year>" +
+        "</book><book>" +
+        "<title>Everyday Spanish</title>" +
+        "<author>Lorca</author>" +
+        "<year>2000</year>" +
+        "</book></bookstore>";
+        
+        parser = new DOMParser();
+        xmlDoc = parser.parseFromString(text,"text/xml");
+        
+        document.getElementById("demo").innerHTML = xmlDoc.getElementsByTagName("title")[1].childNodes[0].nodeValue;
+    }
+   
+    </script>
+
+    <title>XML Dom Parser</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <button onclick="ParseXML()">Parse XML</button>
+</body>
+</html>
