@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML5 GeoLocation</title>
+    <script>
+
+    // Tarea Alumno - completar las actividades 1 - 5 para que funcione esta aplicación. 
+    // OJO: Empezar con HTML, punto 1.
+
+    function GetLocation() {
+        if (navigator.geolocation) {
+            // 2. Ejecutar la función getCurrentPosition 
+            
+
+
+
+        } else {
+            document.getElementById("error").innerHTML="GeoLocation not supported";
+        }
+    }
+   
+   // callback success
+   function CalcularPosition(position) {
+        
+        latitude = position.coords.latitude;
+        longitude = position.coords.longitude;
+        
+        //3. Mostrar las coordinadas actuales/empezar en el DIV
+
+
+
+        // 4. Simular un cambio de posicion. Poner en variables coordinadas diferentes
+        // Realmente se usará la funcion navigator.geolocation.watchPosition(function(position) {
+        
+        
+        //5. Mostrar las coordinadas de cambio de posicion en el DIV
+
+        
+        document.getElementById('distance').innerHTML =
+            calculateDistance(latitude, longitude, currentLat, currentLon);
+
+
+
+   }
+
+
+   // Funcion creado por Movable Type Scripts
+   // http://www.movable-type.co.uk/scripts/latlong.html
+   function calculateDistance(lat1, lon1, lat2, lon2) {
+        var R = 6371; // km
+        var dLat = (lat2 - lat1).toRad();
+        var dLon = (lon2 - lon1).toRad(); 
+        var a = Math.sin(dLat / 2) * Math.sin(dLat / 2) + Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * Math.sin(dLon / 2) * Math.sin(dLon / 2); 
+        var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)); 
+        var d = R * c;
+        return d;
+        }
+    
+    Number.prototype.toRad = function() {
+        return this * Math.PI / 180;
+    }
+
+
+
+    </script>
+</head>
+
+<body>
+ 
+    <div id="tripmeter">
+        <p>
+            Ubicación para empezar (lat, lon):<br/>
+            <span id="startLat">???</span>°, <span id="startLon">???</span>°
+        </p>
+        <p>
+            Ubicación actual (lat, lon):<br/>
+            <span id="currentLat">???</span>°, <span id="currentLon">???</span>°
+        </p>
+        <p>
+            Distancia :<br/>
+            <span id="distance">0</span> km
+        </p>
+    </div>
+
+    <div id="error"></div>
+    <!-- 1. Crear un boton para ejecutar la funcion -->
+    
+
+
+</body>
+</html>
