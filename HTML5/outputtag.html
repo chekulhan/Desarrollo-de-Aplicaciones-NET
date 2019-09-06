@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Output tag</title>
+    <script>
+    function outputUpdate(vol) {
+	    document.querySelector('#volume').value = vol;
+    }
+</script>
+</head>
+<body>
+
+    <!-- valueAsNumber() nuevoa funcion, no hace falta usar parseInt()
+        || 0 -- quitar NaN resultado de la calculacion
+    -->
+
+    <form onsubmit="return false;" oninput = "subtotal1.value = (qty1.valueAsNumber || 0)  
+                * (price1.valueAsNumber || 0); subtotal2.value = parseInt(qty2.value)  
+                * parseInt(price2.value); total.value = parseInt(subtotal1.value) + parseInt(subtotal2.value)" > 
+        <table>
+            <tr>
+                <td>Qty</td>
+                <td>Price</td>
+                <td>Sub Total</td>
+            </tr>
+            <tr>
+                <td><input type="number" id="qty1"></td>
+                <td><input type="number" id="price1"></td>
+                <td><output id="subtotal1" for="qty1 price1"></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="qty2"></td>
+                <td><input type="number" id="price2"></td>
+                <td><output id="subtotal2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><output id="total"></td>
+            </tr>
+            
+        </table>
+    </form>
+  
+    <form>
+        <label for="pregunta1">No me importan los imprevistos, sé que cada día me encontraré situaciones nuevas.</label>
+        <input type="range" min="1" max="5" value="3" id="pregunta1" oninput="outputUpdate(value)">
+        <output for="fader" id="volume">3</output>
+    </form> 
+
+    
+    <form oninput = "sumresult.value = parseInt(A.value)  
+                + parseInt(B.value) + parseInt(C.value)"> 
+            <input type = "number" name = "A" value = "50" /> + 
+            <input type = "range" name = "B" value = "0" /> + 
+            <input type = "number" name = "C" value = "30" /> 
+            <br> 
+            Result: <output name = "sumresult"></output> 
+        </form>
+
+</body>
+</html>
