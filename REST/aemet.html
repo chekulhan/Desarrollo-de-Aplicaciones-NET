@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    function getAEMET() {
+
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("datos").innerHTML = this.responseText;
+
+                // datos complejos en formato JSON
+                var datos = JSON.parse(this.responseText);
+                console.log(datos);
+
+                //Devuelve un Array[0] con un elemento, que es un objeto.
+                console.log("Nombre" + datos[0].nombre);
+                var dato = datos[0];
+                console.log(dato.nombre);
+                console.log(dato.origen.productor);
+                console.log(dato.situacion.texto);
+
+            }
+        };
+        
+        // Datos en formato TEXTO
+        //xhttp.open("GET", "https://opendata.aemet.es/opendata/sh/e3df6e4c" , true);
+        
+        // Datos en formato JSON (complejo)
+        // Devuelve un Array[0] con un elemento, que es un objeto.
+        xhttp.open("GET", "https://opendata.aemet.es/opendata/sh/cf4dd6b0" , true);
+        
+        
+        
+        //xhttp.setRequestHeader('x-apikey', '5dc18adc64e7774913b6e93a');
+        //xhttp.setRequestHeader("content-type", "application/json");
+        //xhttp.setRequestHeader("cache-control", "no-cache");
+
+        xhttp.send();
+
+    }
+    
+    </script>
+
+</head>
+<body>
+    <div id="datos"></div>
+    <button onclick="getAEMET();">get Datos</button>
+</body>
+</html>
