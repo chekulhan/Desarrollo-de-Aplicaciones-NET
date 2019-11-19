@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+    function getRestDB() {
+
+        var xhttp = new XMLHttpRequest();
+        
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("datos").innerHTML = this.responseText;
+
+                // datos complejos en formato JSON
+                var datos = JSON.parse(this.responseText);
+                console.log(datos);
+
+            }
+        };
+        
+        xhttp.withCredentials = false;
+        xhttp.open("GET", "https://centroseim-79cd.restdb.io/rest/usuarios" , true);
+
+        xhttp.setRequestHeader('x-apikey', '5dc18adc64e7774913b6e93a');
+        xhttp.setRequestHeader("content-type", "application/json");
+        xhttp.setRequestHeader("cache-control", "no-cache");
+
+        xhttp.send();
+
+    }
+    
+
+    function enviarRestDB() {
+
+        var xhttp = new XMLHttpRequest();
+
+        var sUser = document.getElementById("name").value;
+        var sUserName = document.getElementById("username").value;
+
+        // crear un nuevo objeto de user
+        var user = {};
+        user.id = 11;
+        user.name = sUser;
+        user.username = sUserName
+
+        // cambiar el formato a JSON {}
+        var datos = JSON.stringify(user);
+
+        console.log(datos);
+
+        xhttp.onreadystatechange = function() {
+        
+            if (this.readyState == 4) {
+                document.getElementById("datos").innerHTML = this.responseText;
+
+                // datos complejos en formato JSON
+                var datos = JSON.parse(this.responseText);
+                console.log(datos);
+            }
+        };
+
+        xhttp.withCredentials = false;
+        xhttp.open("POST", "https://centroseim-79cd.restdb.io/rest/usuarios" , true);
+
+        xhttp.setRequestHeader('x-apikey', '5dc18adc64e7774913b6e93a');
+        xhttp.setRequestHeader("content-type", "application/json");
+        xhttp.setRequestHeader("cache-control", "no-cache");
+
+        xhttp.send(datos); // enviar datos de JSON con la solicitud
+
+    }
+    </script>
+
+</head>
+<body>
+    <div id="datos"></div>
+    <button onclick="getRestDB();">get Datos</button>
+    <br>
+    SEND FORM
+    <form> 
+    Name<input type="text" name="name" id="name" value="">
+    User name:<input type="text" name="username" id="username" value="">
+    </form>
+
+    <button onclick="enviarRestDB();">enviar RESTDB</button>
+
+</body>
+</html>
