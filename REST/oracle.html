@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+
+   
+    <style>
+        table {
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        th, td {
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {background-color: #f2f2f2;}
+        </style>
+
+    
+    
+    <script>
+        function getDatos() {
+
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("demo").innerHTML = this.responseText;
+                    
+                    var Preguntas = JSON.parse(this.responseText);
+                    var sData = "<table>"
+                    Preguntas.forEach(element => {
+                        sData = sData + "<tr><td><a href='javascript:getDato(" + element.QuestionId +")'>";
+                        sData = sData + element.QuestionText;
+                        sData = sData + element.Question
+                        sData = sData + "</td></tr>";
+                    });
+                    sData = sData + "</table>";
+                    document.getElementById("oracle").innerHTML = sData;
+                }
+            };
+            xhttp.open("GET", "data/oracle.json", true);
+            xhttp.send();
+        }
+
+
+        function getDato(idPregunta) {
+        
+        alert(idPregunta);
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("demo").innerHTML = this.responseText;
+                
+                var Preguntas = JSON.parse(this.responseText);
+                var sData = JSON.stringify(Preguntas[2]); // CMABIAR
+
+                document.getElementById("oracledetails").innerHTML = sData;
+            }
+        };
+        xhttp.open("GET", "data/oracle.json", true);
+        xhttp.send();
+        }
+    </script>
+</head>
+<body>
+    Enter User ID:<input type="number" id="userid"></input></br>
+    <div id="demo"></div>
+    
+    <button onclick="getDatos()">Get Datos</button> 
+    <div id="oracle"></div>
+    <div id="oracledetails"></div>
+   
+  
+</body>
+</html>
