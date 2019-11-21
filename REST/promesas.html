@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+
+<script>
+    function execPromesa() {
+
+        var estaContenta = true;
+        // 1. Crear promesa
+        var PromesaParaUnMovil = new Promise(
+            function(resolve, reject) {
+                if(estaContenta == true) {
+                    var movil = {marca:"Apple iPhone", precio:200};
+                    resolve(movil);
+                }
+                else {
+                    var err = new Error('Lo siento');
+                    reject(err);
+                }
+
+            }
+        );
+
+
+        // consumir la promesa
+        var pedirMovil = function() {
+
+            console.log('begin promesa');
+
+            PromesaParaUnMovil
+                .then(function(fulfilled) {
+                    console.log(fulfilled);
+                })
+                .catch(function(reject) {
+                    console.log(reject)
+                });
+              
+            console.log('fin promesa');
+        }
+
+        pedirMovil();
+
+    }
+
+
+</script>
+
+</head>
+<body>
+    <div id="resultados"></div>
+    <button onclick="execPromesa();">Exec Promesa</button>
+</body>
+</html>
