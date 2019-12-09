@@ -14,6 +14,11 @@ namespace WebInterfaz.Pages
     {
 
         public List<Genre> genres { get; set; }
+        
+        public int GenreId { get; set; }
+        public string Name { get; set; }
+        
+        
         public void OnGet()
         {
 
@@ -28,5 +33,27 @@ namespace WebInterfaz.Pages
             
 
         }
+        
+        
+        
+        public void OnPost(int GenreId, string Name)
+        {
+
+            var client = new RestClient("https://localhost:44305/api/genres");
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("cache-control", "no-cache");
+            request.AddHeader("content-type", "application/x-www-form-urlencoded"); // imprescindible para enlazar formulario valores con objeto de web api
+
+            // agregamos parameters de formulario
+            request.AddParameter("GenreId", GenreId);
+            request.AddParameter("Name", Name);
+
+            IRestResponse response = client.Post(request);
+
+            OnGet();
+
+        }
+        
+        
     }
 }
