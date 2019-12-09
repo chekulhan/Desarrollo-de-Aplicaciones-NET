@@ -12,13 +12,23 @@
     <title>AJAX2</title>
 </head>
 <body>
+<h1>Response data</h1>
+    <table>
+        @foreach (var genre in Model.genres)
+        {
+        <tr>
+            <td>@genre.GenreId</td>
+            <td>@genre.Name</td>
+        </tr>
+        }
+    </table>
 
-    <h1>Response data</h1>
-    @foreach (var genre in Model.genres)
-    {
-        <div>@genre.GenreId</div>
-        <div>@genre.Name</div>
-        <br />
-    }
+    <br />
+    <form method="post">
+        ID de Genre:<input type="text" asp-for="GenreId" />
+        Nombre de Genre:<input type="text" asp-for="Name" />
+        <button type="Submit">Insertar Datos</button>
+
+    </form>
 </body>
 </html>
