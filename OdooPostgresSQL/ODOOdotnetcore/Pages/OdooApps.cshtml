@@ -1,0 +1,17 @@
+﻿@page
+@model OdooAppsModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<table>
+@foreach (var app in Model.apps)
+{
+    <tr>
+        <td>@app.Name</td>
+        <td>@app.Author</td>
+        <td>@app.CreateDate</td>
+    </tr>
+
+}     
+</table>
