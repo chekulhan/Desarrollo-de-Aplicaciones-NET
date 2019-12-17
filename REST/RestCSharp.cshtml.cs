@@ -54,6 +54,22 @@ namespace WebInterfaz.Pages
 
         }
         
+         // Fijáte en la página de HTML
+        // <form method="post" asp-page-handler="delete">
+        public void OnPostDelete(int GenreId)
+        {
+
+            var client = new RestClient("https://localhost:44305/api/genres/" + GenreId);
+            var request = new RestRequest(Method.DELETE);
+            request.AddHeader("cache-control", "no-cache");
+            request.AddHeader("content-type", "application/x-www-form-urlencoded"); // imprescindible para enlazar formulario valores con objeto de web api
+
+            IRestResponse response = client.Delete(request);
+
+            OnGet();
+
+        }
+        
         
     }
 }
