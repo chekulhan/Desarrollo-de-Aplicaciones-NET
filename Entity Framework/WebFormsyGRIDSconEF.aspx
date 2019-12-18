@@ -11,6 +11,9 @@
     <form id="form1" runat="server">
         <div>
 
+    <!-- https://www.youtube.com/watch?v=MAoJ5eGEK9w 
+    Fijáte en el DataSource de gridView2 
+    -->
      <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False">
             <Columns>
                 <asp:TemplateField HeaderText="Id">
