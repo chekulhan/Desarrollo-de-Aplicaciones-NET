@@ -1,0 +1,16 @@
+@page
+@model abc1Model
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<h1>@Model.Message<h1></h1>
+
+Página para demostrar el uso de "asp-page-handler" para OnGet y "asp-route-carid" para pasar un parámetro
+asp-page-handler="CarOnly" coincide con el método OnGetCarOnly(int carid) con un parámetro
+
+@foreach (var car in Model.Cars)
+{
+    <a asp-page="abc1" asp-page-handler="CarOnly" asp-route-carid="@car.Id">@car.Make</a> <br>
+
+}
