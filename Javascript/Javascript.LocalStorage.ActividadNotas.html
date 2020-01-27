@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VS Code Colab y Session y Local Storage</title>
+
+    <script>
+    // Demostracion de clase con VSCode colaboración
+    // Persistiendo objetos en local y session storage
+    
+    //Los datos con sessionStorage son accesibles mientras dura la sesión de navegación
+    function IntroSessionStorage() {
+
+        sessionStorage.setItem('Nombre', 'Tom');
+        sessionStorage.setItem('Apellido', 'Smith');
+
+        alert(sessionStorage.length);
+        alert(sessionStorage.getItem('Nombre'));
+        alert(sessionStorage.Apellido);
+
+        sessionStorage.clear();
+    }    
+
+    //Este objeto tiene las mismas propiedades y métodos que sessionStorage, pero su persistencia va más allá de la sesión
+    function IntroLocalStorage() {
+
+        localStorage.setItem('Nombre', 'Tom');
+        localStorage.setItem('Apellido', 'Smith');
+
+        
+
+        alert(localStorage.length);
+        alert(localStorage.getItem('Nombre'));
+        alert(localStorage.Apellido);
+
+        // agregar un objeto usando funciones de JSON
+        var persona = { name:"Axl", apellido:"Rose" };
+        localStorage.setItem("persona", JSON.stringify(persona));
+        console.log(localStorage.getItem("persona"));
+
+        localStorage.clear();
+    }    
+
+    
+    window.onload=function(){
+    
+        // Actividad para alumnos
+        
+        var i = 0; // mantener indice de localstorage
+
+        const input = document.getElementById('nota');
+
+        const form = document.querySelector("form");
+        const ul = document.querySelector('ul');
+        
+        // No es la primera vez i.e. existe alguna nota ya guardado en localstorage... ?
+        if (localStorage.getItem("notas0") != null) {
+            console.log("Ya existe notas");
+            //si existe, mostrar las notas en el UL tag
+            for (let index = 0; index < localStorage.length; index++) {
+                li = document.createElement('li');
+                li.textContent = localStorage.getItem("notas" + index); ;
+                ul.appendChild(li);
+            }
+
+        }
+
+        // escucha el evento ENTER
+        form.addEventListener('submit', function(e) {
+            
+            e.preventDefault()
+            
+            li = document.createElement('li');
+            li.textContent = input.value;
+            ul.appendChild(li);
+            
+            
+            localStorage.setItem("notas" + i, input.value); // guardar valor en localstorage
+            i+=1; // incrementar el indice de localstorage
+            console.log(i);
+            input.value = '';
+        })
+
+    } // fin de window.onload function
+   
+
+    function ResetearNotas() {
+
+        localStorage.clear();
+        // Mejoras: clear todos los LI de UL lista al resetear
+    }
+
+    </script>
+</head>
+<body>
+    <button onclick="IntroSessionStorage()">Intro a Session Storage</button>
+    <button onclick="IntroLocalStorage()">Intro a Local Storage</button>
+
+    <div class="small-container">
+        <h1>Nueva App de Notas</h1>
+    
+        <form>
+          <input id="nota" type="text" placeholder="Nueva Nota">
+        </form>
+    
+        <h2>Notas</h2>
+        <ul></ul>
+    
+        <button onclick="ResetearNotas()">Resetear</button>
+
+    </div>
+
+   
+</body>
+</html>
