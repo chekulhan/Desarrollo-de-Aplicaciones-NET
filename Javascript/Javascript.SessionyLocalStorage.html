@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>VS Code Colab y Session y Local Storage</title>
+
+    <script>
+    // Demostracion de clase con VSCode colaboración
+    // Persistiendo objetos en local y session storage
+    
+    //Los datos con sessionStorage son accesibles mientras dura la sesión de navegación
+    function IntroSessionStorage() {
+
+        sessionStorage.setItem('Nombre', 'Tom');
+        sessionStorage.setItem('Apellido', 'Smith');
+
+        alert(sessionStorage.length);
+        alert(sessionStorage.getItem('Nombre'));
+        alert(sessionStorage.Apellido);
+
+        sessionStorage.clear();
+    }    
+
+    //Este objeto tiene las mismas propiedades y métodos que sessionStorage, pero su persistencia va más allá de la sesión
+    function IntroLocalStorage() {
+
+        localStorage.setItem('Nombre', 'Tom');
+        localStorage.setItem('Apellido', 'Smith');
+
+        
+
+        alert(localStorage.length);
+        alert(localStorage.getItem('Nombre'));
+        alert(localStorage.Apellido);
+
+        // agregar un objeto usando funciones de JSON
+        var persona = { name:"Axl", apellido:"Rose" };
+        localStorage.setItem("persona", JSON.stringify(persona));
+        console.log(localStorage.getItem("persona"));
+
+        localStorage.clear();
+    }    
+
+    
+    
+    // Actividad para alumnos
+    
+    function AgregarNota() {
+        const input = document.getElementById('nota');
+
+        console.log("nota");
+        console.log(localStorage.length());
+
+        
+    }
+
+
+   
+    localStorage.setItem('notas', JSON.stringify(itemsArray));
+    const data = JSON.parse(localStorage.getItem('items'));
+
+    const liMaker = (text) => {
+    const li = document.createElement('li');
+    li.textContent = text;
+    ul.appendChild(li);
+    }
+
+    form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    itemsArray.push(input.value);
+    localStorage.setItem('items', JSON.stringify(itemsArray));
+    liMaker(input.value);
+    input.value = "";
+    });
+
+    data.forEach(item => {
+    liMaker(item);
+    });
+
+    button.addEventListener('click', function () {
+    localStorage.clear();
+    while (ul.firstChild) {
+        ul.removeChild(ul.firstChild);
+    }
+    itemsArray = [];
+    }); 
+
+
+    </script>
+</head>
+<body>
+    <button onclick="IntroSessionStorage()">Intro a Session Storage</button>
+    <button onclick="IntroLocalStorage()">Intro a Local Storage</button>
+
+    <div class="small-container">
+        <h1>New Tab App</h1>
+    
+        <form>
+          <input id="nota" type="text" placeholder="New">
+        </form>
+    
+        <h2>Notas</h2>
+        <ul></ul>
+    
+        <button>Resetear</button>
+    </div>
+
+   
+</body>
+</html>
