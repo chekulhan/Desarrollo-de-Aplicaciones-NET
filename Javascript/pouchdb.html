@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pouch DB</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pouchdb/7.1.1/pouchdb.min.js"></script>
+
+<script>
+
+
+
+    function addPersona() {
+        // Crear o abrir una base de datos IndexedDB
+        var db = new PouchDB('personas');
+
+        
+
+
+        // Mostrar datos de la base de datos
+        db.info()
+        .then((info) => {
+            console.log(info);
+        })
+
+        var nombre = document.getElementById("nombre");
+        var apellido = document.getElementById("apellido");
+        // Crear un objeto y asignar los valores de input
+        var personas = {
+            _id: new Date().toISOString(),
+            nombre: nombre.value,
+            apellido: apellido.value,
+            completed: false
+        };
+
+        //agregar un objeto
+        db.put(personas, function callback(err, result) {
+            if (!err) {
+            console.log('Successfully posted a persona!');
+            }
+        });
+
+        // get todos los objetos
+        db.allDocs({ include_docs: true, descending: true }, (err, doc) => {
+
+            const ul = document.querySelector('ul');
+
+            doc.rows.forEach(e => {
+                li = document.createElement('li');
+                li.textContent = e.doc.nombre + " " + e.doc.apellido;
+                ul.appendChild(li);
+                console.log(e.doc);
+            });
+
+            }).catch((err) => {
+                console.error(err);
+            });
+
+    }
+        
+
+</script>
+
+</head>
+<body>
+    <!-- No funciona con input dentro de un form -->
+
+    Nombre<input type="text" name="nombre" id="nombre">
+    Apellido<input type="text" name="apellido" id="apellido">
+    <button onclick="addPersona();">Add Persona</button>
+
+    <h2>Personas</h2>
+    <ul></ul>
+
+</body>
+</html>
