@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    
+    function GetObjects(){
+
+    let indice = document.getElementById("id").value;
+    var divdatos = document.getElementById("datos");
+
+   let sData = `[
+  {
+    "_id": {
+      "$oid": "573a1399f29313caabceeb20"
+    },
+    "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "title": "The Shawshank Redemption",
+    "languages": [
+      "English"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "573a139ff29313caabd015b9"
+    },
+    "plot": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency.",
+    "genres": [
+      "Crime",
+      "Drama"
+    ],
+    "title": "The Shawshank Redemption",
+    "languages": [
+      "English"
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "573a13b5f29313caabd42722"
+    },
+    "plot": "When the menace known as the Joker wreaks havoc and chaos on the people of Gotham, the caped crusader must come to terms with one of the greatest psychological tests of his ability to fight injustice.",
+    "genres": [
+      "Action",
+      "Crime",
+      "Drama"
+    ],
+    "title": "The Dark Knight",
+    "languages": [
+      "English",
+      "Mandarin"
+    ]
+  }
+]`;
+
+  var arrPeliculas = JSON.parse(sData);
+        // Mostrar datos en el DIV
+        divdatos.innerHTML = arrPeliculas[indice].title;
+    }
+    
+    </script>
+</head>
+<body>
+
+    Introducir un número:<input type="text" id="id">
+    <button onclick="GetObjects()">Obtener datos de la pelicula</button>
+    
+    <div id="datos"></div>
+</body>
+</html>
