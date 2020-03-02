@@ -5,6 +5,8 @@
     },
     "name": "Alex Gorney Web Development",
     "blog_url": "http://www.alexgorney.com",
+    "number_of_employees": 1,
+    "founded_year": 2001,
     "description": null,
     "products": []
   },
@@ -14,6 +16,8 @@
     },
     "name": "Are You Watching This?!",
     "blog_url": "http://blog.areyouwatchingthis.com",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": "Sports Information Aggregator",
     "products": []
   },
@@ -23,6 +27,8 @@
     },
     "name": "Blogonize",
     "blog_url": "http://www.scoop.blogonize.com/index.html",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "",
     "products": [
       {
@@ -41,6 +47,8 @@
     },
     "name": "Daikana",
     "blog_url": "http://www.daikana.com/Blog.aspx",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -50,6 +58,8 @@
     },
     "name": "DormTrader",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Campus Marketplace, Social Library",
     "products": []
   },
@@ -59,6 +69,8 @@
     },
     "name": "Dynamic Clothing",
     "blog_url": "http://blog.dynamicclothing.net",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": "",
     "products": []
   },
@@ -68,6 +80,8 @@
     },
     "name": "eBurl",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -77,6 +91,8 @@
     },
     "name": "Entrecard",
     "blog_url": "http://entrecard.com/blog",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "blog advertising network",
     "products": [
       {
@@ -95,6 +111,8 @@
     },
     "name": "esoTalk",
     "blog_url": "http://esotalk.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "",
     "products": [
       {
@@ -109,6 +127,8 @@
     },
     "name": "FeedJournal",
     "blog_url": "http://feedjournal.blogspot.com",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": "Your Personal Newspaper",
     "products": []
   },
@@ -118,6 +138,8 @@
     },
     "name": "FeVote",
     "blog_url": "http://blog.fevote.com/",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -127,6 +149,8 @@
     },
     "name": "Folkstr",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "white-label Social Network",
     "products": []
   },
@@ -136,6 +160,8 @@
     },
     "name": "Gimeney",
     "blog_url": "http://feeds.feedburner.com/gimeney",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -145,6 +171,8 @@
     },
     "name": "GPokr",
     "blog_url": "http://gpokr.wordpress.com/",
+    "number_of_employees": 1,
+    "founded_year": null,
     "description": "",
     "products": [
       {
@@ -159,6 +187,8 @@
     },
     "name": "HEXIO",
     "blog_url": "http://b.hex.io",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Data Mining",
     "products": []
   },
@@ -168,6 +198,8 @@
     },
     "name": "I-stats",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2004,
     "description": "Real-time Web Analytics",
     "products": []
   },
@@ -177,6 +209,8 @@
     },
     "name": "Innoveghtive",
     "blog_url": "http://innoveghtive.com/wordpress",
+    "number_of_employees": 1,
+    "founded_year": 1999,
     "description": null,
     "products": [
       {
@@ -191,6 +225,8 @@
     },
     "name": "IntroNiche",
     "blog_url": "http://www.introniche.com/blog",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -200,6 +236,8 @@
     },
     "name": "iPlaceBook",
     "blog_url": "http://www.iplacebook.com/blog.php",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Location Information and social network",
     "products": []
   },
@@ -209,6 +247,8 @@
     },
     "name": "Jungle Jam Tv",
     "blog_url": "http://junglejamtv.blogspot.com/",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": null,
     "products": []
   },
@@ -218,6 +258,8 @@
     },
     "name": "LaterLoop",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": null,
     "description": null,
     "products": [
       {
@@ -232,6 +274,8 @@
     },
     "name": "Localeze",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2001,
     "description": "",
     "products": [
       {
@@ -246,6 +290,8 @@
     },
     "name": "MaybeMike",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": [
       {
@@ -260,6 +306,8 @@
     },
     "name": "Monkey in your Soul",
     "blog_url": "http://monkeyinyoursoul.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -269,6 +317,8 @@
     },
     "name": "MyApartmentMap",
     "blog_url": "http://www.myapartmentmap.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": null,
     "products": []
   },
@@ -278,6 +328,8 @@
     },
     "name": "Myplaylist",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "",
     "products": []
   },
@@ -287,6 +339,8 @@
     },
     "name": "Open Source Food",
     "blog_url": "http://www.yongfook.com",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "recipe social network",
     "products": []
   },
@@ -296,6 +350,8 @@
     },
     "name": "Open Source Living",
     "blog_url": "http://www.osliving.com/sourced",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -305,6 +361,8 @@
     },
     "name": "OurStage",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2006,
     "description": "online avenue for indie musicians",
     "products": [
       {
@@ -323,6 +381,8 @@
     },
     "name": "Phreadz",
     "blog_url": "http://blog.phreadz.com",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Multimedia Conversation Network",
     "products": []
   },
@@ -332,6 +392,8 @@
     },
     "name": "Public Domain Archive and Reprints Service",
     "blog_url": "http://feeds.feedburner.com/PublicDomainReprintsBlog",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -341,6 +403,8 @@
     },
     "name": "Quirk",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2010,
     "description": "",
     "products": []
   },
@@ -350,6 +414,8 @@
     },
     "name": "Randomate",
     "blog_url": "http://www.randomate.com/weblog.asp?user=artharrison",
+    "number_of_employees": 1,
+    "founded_year": null,
     "description": null,
     "products": [
       {
@@ -364,6 +430,8 @@
     },
     "name": "skoogO",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Information networking",
     "products": []
   },
@@ -373,6 +441,8 @@
     },
     "name": "SmashingFeeds",
     "blog_url": "http://smashingfeeds.blogspot.com/",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "News Aggregator",
     "products": []
   },
@@ -382,6 +452,8 @@
     },
     "name": "SmokeJumper Strategy",
     "blog_url": "http://www.smokejumpingblog.blogspot.com/",
+    "number_of_employees": 1,
+    "founded_year": 2004,
     "description": "consulting firm ",
     "products": []
   },
@@ -391,6 +463,8 @@
     },
     "name": "Sporting Connections",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -400,6 +474,8 @@
     },
     "name": "Stumpedia",
     "blog_url": "http://www.stumpedia.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Human-powered search enging",
     "products": []
   },
@@ -409,6 +485,8 @@
     },
     "name": "Swamp Fox",
     "blog_url": "http://www.swampfox.ws/swamp-fox-news",
+    "number_of_employees": 1,
+    "founded_year": 2000,
     "description": null,
     "products": []
   },
@@ -418,6 +496,8 @@
     },
     "name": "The Publicity Wheel",
     "blog_url": "http://www.publicitywheel.com/taxonomy/term/1",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "SEO and Traffic Generation",
     "products": []
   },
@@ -427,6 +507,8 @@
     },
     "name": "ThoughtTrail",
     "blog_url": "http://thoughttrail.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": "Contextual semantic software",
     "products": []
   },
@@ -436,6 +518,8 @@
     },
     "name": "TOKiBiz",
     "blog_url": "http://tomokeefe.com",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -445,6 +529,8 @@
     },
     "name": "tomatic",
     "blog_url": "http://tomatic.com",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": [
       {
@@ -471,6 +557,8 @@
     },
     "name": "twit+",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Twitter app for Video",
     "products": []
   },
@@ -480,6 +568,8 @@
     },
     "name": "Twubble",
     "blog_url": "http://blog.crazybob.org/",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Twitter Friend Recommendation",
     "products": []
   },
@@ -489,6 +579,8 @@
     },
     "name": "Unype",
     "blog_url": "http://holoscape.com/u",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -498,6 +590,8 @@
     },
     "name": "urlBorg",
     "blog_url": "http://vrypan.net/log/",
+    "number_of_employees": 1,
+    "founded_year": 2007,
     "description": null,
     "products": []
   },
@@ -507,6 +601,8 @@
     },
     "name": "W3Counter",
     "blog_url": "http://www.dangrossman.info",
+    "number_of_employees": 1,
+    "founded_year": 2004,
     "description": null,
     "products": []
   },
@@ -516,6 +612,8 @@
     },
     "name": "wagehub",
     "blog_url": "",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Career Advice Provider",
     "products": []
   },
@@ -525,6 +623,8 @@
     },
     "name": "Zipityzap",
     "blog_url": "http://zipityzap.com/blog/",
+    "number_of_employees": 1,
+    "founded_year": 2008,
     "description": "Internet Television",
     "products": [
       {
