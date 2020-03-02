@@ -1,0 +1,624 @@
+[
+  {
+    "_id": {
+      "$oid": "4ba27f69238d3ba3ca002369"
+    },
+    "href": "http://digg.com/health/Artificial_Muscles_Restore_Ability_to_Blink_Save_Eyesight",
+    "title": "Artificial Muscles Restore Ability to Blink, Save Eyesight",
+    "comments": 4,
+    "container": {
+      "name": "Lifestyle",
+      "short_name": "lifestyle"
+    },
+    "submit_date": 1263816196,
+    "topic": {
+      "name": "Health",
+      "short_name": "health"
+    },
+    "promote_date": 1263862202,
+    "id": "18582665",
+    "media": "news",
+    "diggs": 254,
+    "description": "Surgeons from UC Davis Medical Center have demonstrated that artificial muscles can restore the ability of patients with facial paralysis to blink, a development that could benefit the thousands of people each year who no longer are able to close their eyelids due to combat-related injuries, stroke, nerve injury or facial surgery.",
+    "link": "http://www.physorg.com/news183018705.html",
+    "user": {
+      "name": "TedsGame",
+      "registered": 1200895106,
+      "fullname": "Ted Ursu",
+      "icon": "http://digg.com/users/TedsGame/l.png",
+      "profileviews": 23766
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31FyCP",
+        "view_count": 286
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27e5d238d3ba3ca0021da"
+    },
+    "href": "http://digg.com/basketball/UConn_BBall_Coach_Jim_Calhoun_Taking_Leave_Of_Absence",
+    "title": "UConn BBall Coach Jim Calhoun Taking Leave Of Absence",
+    "comments": 3,
+    "container": {
+      "name": "Sports",
+      "short_name": "sports"
+    },
+    "submit_date": 1263941298,
+    "topic": {
+      "name": "Basketball",
+      "short_name": "basketball"
+    },
+    "promote_date": 1264026003,
+    "id": "18623467",
+    "media": "news",
+    "diggs": 163,
+    "description": "Jim Calhoun is taking an indefinite leave of absence because of undisclosed medical issues. This will be the 22nd time that Calhoun, who has beaten cancer multiple times, will have to miss all or part of a UConn game because of illness.",
+    "link": "http://www.theuconnblog.com/2010/1/19/1259650/calhoun-to-take-leave-of-absence",
+    "user": {
+      "name": "spiderman0505",
+      "registered": 1233946356,
+      "icon": "http://digg.com/users/spiderman0505/l.png",
+      "profileviews": 9340
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31G8oV",
+        "view_count": 141
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27ee2238d3ba3ca00226b"
+    },
+    "href": "http://digg.com/basketball/UConn_BBall_Coach_Jim_Calhoun_Taking_Leave_Of_Absence",
+    "title": "UConn BBall Coach Jim Calhoun Taking Leave Of Absence",
+    "comments": 3,
+    "container": {
+      "name": "Sports",
+      "short_name": "sports"
+    },
+    "submit_date": 1263941298,
+    "topic": {
+      "name": "Basketball",
+      "short_name": "basketball"
+    },
+    "promote_date": 1264026003,
+    "id": "18623467",
+    "media": "news",
+    "diggs": 163,
+    "description": "Jim Calhoun is taking an indefinite leave of absence because of undisclosed medical issues. This will be the 22nd time that Calhoun, who has beaten cancer multiple times, will have to miss all or part of a UConn game because of illness.",
+    "link": "http://www.theuconnblog.com/2010/1/19/1259650/calhoun-to-take-leave-of-absence",
+    "user": {
+      "name": "spiderman0505",
+      "registered": 1233946356,
+      "icon": "http://digg.com/users/spiderman0505/l.png",
+      "profileviews": 9340
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31G8oV",
+        "view_count": 141
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27ea0238d3ba3ca00220d"
+    },
+    "href": "http://digg.com/basketball/UConn_BBall_Coach_Jim_Calhoun_Taking_Leave_Of_Absence",
+    "title": "UConn BBall Coach Jim Calhoun Taking Leave Of Absence",
+    "comments": 3,
+    "container": {
+      "name": "Sports",
+      "short_name": "sports"
+    },
+    "submit_date": 1263941298,
+    "topic": {
+      "name": "Basketball",
+      "short_name": "basketball"
+    },
+    "promote_date": 1264026003,
+    "id": "18623467",
+    "media": "news",
+    "diggs": 163,
+    "description": "Jim Calhoun is taking an indefinite leave of absence because of undisclosed medical issues. This will be the 22nd time that Calhoun, who has beaten cancer multiple times, will have to miss all or part of a UConn game because of illness.",
+    "link": "http://www.theuconnblog.com/2010/1/19/1259650/calhoun-to-take-leave-of-absence",
+    "user": {
+      "name": "spiderman0505",
+      "registered": 1233946356,
+      "icon": "http://digg.com/users/spiderman0505/l.png",
+      "profileviews": 9340
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31G8oV",
+        "view_count": 141
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27e5d238d3ba3ca0021a4"
+    },
+    "href": "http://digg.com/environment/UA_Tech_Park_chosen_for_32_million_Solar_Zone_project",
+    "title": "UA Tech Park chosen for $32 million 'Solar Zone' project",
+    "comments": 0,
+    "container": {
+      "name": "Science",
+      "short_name": "science"
+    },
+    "submit_date": 1263980949,
+    "topic": {
+      "name": "Environment",
+      "short_name": "environment"
+    },
+    "promote_date": 1264068602,
+    "id": "18633780",
+    "media": "news",
+    "diggs": 260,
+    "description": "University of Arizona Science and Technology Park has chosen the UA Tech Park to introduce the “Solar Zone\".",
+    "link": "http: //www.ecofriend.org/entry/ua-tech-park-chosen-for-32-million-solar-zone-project/",
+    "user": {
+      "name": "fms45",
+      "registered": 1219912631,
+      "fullname": "Caine ",
+      "icon": "http://digg.com/users/fms45/l.png",
+      "profileviews": 7539
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31GBUq",
+        "view_count": 379
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27e1a238d3ba3ca002161"
+    },
+    "href": "http://digg.com/environment/UA_Tech_Park_chosen_for_32_million_Solar_Zone_project",
+    "title": "UA Tech Park chosen for $32 million 'Solar Zone' project",
+    "comments": 0,
+    "container": {
+      "name": "Science",
+      "short_name": "science"
+    },
+    "submit_date": 1263980949,
+    "topic": {
+      "name": "Environment",
+      "short_name": "environment"
+    },
+    "promote_date": 1264068602,
+    "id": "18633780",
+    "media": "news",
+    "diggs": 260,
+    "description": "University of Arizona Science and Technology Park has chosen the UA Tech Park to introduce the “Solar Zone\".",
+    "link": "http://www.ecofriend.org/entry/ua-tech-park-chosen-for-32-million-solar-zone-project/",
+    "user": {
+      "name": "fms45",
+      "registered": 1219912631,
+      "fullname": "Caine",
+      "icon": "http: //digg.com/users/fms45/l.png",
+      "profileviews": 7539
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31GBUq",
+        "view_count": 379
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27e5d238d3ba3ca0021b5"
+    },
+    "href": "http: //digg.com/tech_news/Rebtel_Buying_a_Part_of_Talkster",
+    "title": "RebtelBuyingaPartofTalkster",
+    "comments": 2,
+    "container": {
+      "name": "Technology",
+      "short_name": "technology"
+    },
+    "submit_date": 1263997563,
+    "topic": {
+      "name": "TechIndustryNews",
+      "short_name": "tech_news"
+    },
+    "promote_date": 1264050002,
+    "id": "18638870",
+    "media": "news",
+    "diggs": 141,
+    "description": "Rebtel",
+    "link": "http: //gigaom.com/2010/01/18/rebtel-buying-a-part-of-talkster/",
+    "user": {
+      "name": "DorothyLaudie",
+      "registered": 1190583249,
+      "fullname": "Dorothy Laudie",
+      "icon": "http://digg.com/users/DorothyLaudie/l.png",
+      "profileviews": 23903
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31GCow",
+        "view_count": 204
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27e1a238d3ba3ca002186"
+    },
+    "href": "http://digg.com/tech_news/Rebtel_Buying_a_Part_of_Talkster",
+    "title": "Rebtel Buying a Part of Talkster",
+    "comments": 2,
+    "container": {
+      "name": "Technology",
+      "short_name": "technology"
+    },
+    "submit_date": 1263997563,
+    "topic": {
+      "name": "Tech Industry News",
+      "short_name": "tech_news"
+    },
+    "promote_date": 1264050002,
+    "id": "18638870",
+    "media": "news",
+    "diggs": 141,
+    "description": "Rebtel, the Stockholm, Sweden-based VoIP service provider, is buying Free World Dialing, a division of Toronto-based VoIP service provider, Talkster for an undisclosed amount. As part of the agreement, Rebtel will carry all of Talkster’s international traffic over its network. Late last year, Rebtel acquired Gorilla Mobile ",
+    "link": "http://gigaom.com/2010/01/18/rebtel-buying-a-part-of-talkster/",
+    "user": {
+      "name": "DorothyLaudie",
+      "registered": 1190583249,
+      "fullname": "DorothyLaudie",
+      "icon": "http: //digg.com/users/DorothyLaudie/l.png",
+      "profileviews": 23903
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31GCow",
+        "view_count": 204
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27d8f238d3ba3ca0020ab"
+    },
+    "href": "http: //digg.com/general_sciences/Brain_protein_critical_to_Movement_Memory_Learning_decoded",
+    "title": "BrainproteincriticaltoMovement,
+    Memory,
+    Learningdecoded",
+    "comments": 4,
+    "thumbnail": {
+      "originalheight": 461,
+      "originalwidth": 469,
+      "src": "http: //digg.com/general_sciences/Brain_protein_critical_to_Movement_Memory_Learning_decoded/t.png",
+      "height": 80,
+      "width": 80,
+      "contentType": "image/png"
+    },
+    "container": {
+      "name": "Science",
+      "short_name": "science"
+    },
+    "submit_date": 1264101526,
+    "topic": {
+      "name": "GeneralSciences",
+      "short_name": "general_sciences"
+    },
+    "promote_date": 1264126804,
+    "id": "18673973",
+    "media": "news",
+    "diggs": 613,
+    "description": "ThestructureofaproteinthathelpsrelayelectricalpulsesbetweenneuronshasbeenfullymappedusingtheAdvancedLightSource.Thismuch-anticipatedmilestonecouldleadtonewtreatmentsforneurologicaldiseasesandabetterunderstandingofhowthenervoussystemworks.",
+    "link": "http: //newscenter.lbl.gov/feature-stories/2010/01/21/glutamate-receptor/",
+    "user": {
+      "name": "ThePowerDigger",
+      "registered": 1217768087,
+      "icon": "http: //digg.com/users/ThePowerDigger/l.png",
+      "profileviews": 65119
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31GLx7",
+        "view_count": 636
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27a67238d3ba3ca001bc2"
+    },
+    "href": "http: //digg.com/business_finance/The_Press_After_the_Captain_A_Daily_s_Blast_from_the_Past",
+    "title": "ThePress: AftertheCaptain(ADailysBlastfromthePast)", "comments": 3, "container": {
+      "name": "World&Business", "short_name": "world_business"
+    }, "submit_date": 1264962979, "topic": {
+      "name": "Business&Finance", "short_name": "business_finance"
+    }, "promote_date": 1265039131, "id": "18910874", "media": "news", "diggs": 265, "description": "\"ItwontlastfiveyearsafterIdie.\"CaptainJosephMedillPattersonmayhavebeenonlyhalfjokingwhenhepredictedtheendoftheNewYorkDailyNews,
+    thebigandboisteroustabloidthatheranasaone-manshowfromthedayhehelpedfoundit*in1919untilhisdeathin1946.", 
+"link": "http: //www.time.com/time/magazine/article/0,
+    9171,
+    872474,
+    00.html", 
+"user": {
+      
+"name": "Blinker1315", 
+"registered": 1209311682, 
+"fullname": "RussSmith", 
+"icon": "http: //digg.com/users/Blinker1315/l.png", 
+"profileviews": 56909
+    }, 
+"status": "popular", 
+"shorturl": [
+      
+{
+        
+"short_url": "http://digg.com/d31HLa6", 
+"view_count": 324
+      }
+    ]
+  }, 
+{
+    
+"_id": {
+      
+"$oid": "4ba27a25238d3ba3ca001b84"
+    }, 
+"href": "http: //digg.com/business_finance/The_Press_After_the_Captain_A_Daily_s_Blast_from_the_Past", 
+"title": "ThePress: AftertheCaptain(ADailysBlastfromthePast)", 
+"comments": 3, 
+"container": {
+      
+"name": "World&Business", 
+"short_name": "world_business"
+    }, 
+"submit_date": 1264962979, 
+"topic": {
+      
+"name": "Business&Finance", 
+"short_name": "business_finance"
+    }, 
+"promote_date": 1265039131, 
+"id": "18910874", 
+"media": "news", 
+"diggs": 265, 
+"description": "\"Itwont last five years after I die.\"CaptainJosephMedillPattersonmayhavebeenonlyhalfjokingwhenhepredictedtheendoftheNewYorkDailyNews,
+    thebigandboisteroustabloidthatheranasaone-manshowfromthedayhehelpedfoundit*in1919untilhisdeathin1946.",
+    "link": "http: //www.time.com/time/magazine/article/0,
+    9171,
+    872474,
+    00.html",
+    "user": {
+      "name": "Blinker1315",
+      "registered": 1209311682,
+      "fullname": "RussSmith",
+      "icon": "http: //digg.com/users/Blinker1315/l.png",
+      "profileviews": 56909
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http://digg.com/d31HLa6",
+        "view_count": 324
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba277c0238d3ba3ca001819"
+    },
+    "href": "http: //digg.com/general_sciences/Smallest_eel_loach_Fish_Discovered",
+    "title": "Smallesteel-loachFishDiscovered",
+    "comments": 2,
+    "thumbnail": {
+      "originalheight": 106,
+      "originalwidth": 260,
+      "src": "http: //digg.com/general_sciences/Smallest_eel_loach_Fish_Discovered/t.jpg",
+      "height": 80,
+      "width": 80,
+      "contentType": "image/jpeg"
+    },
+    "container": {
+      "name": "Science",
+      "short_name": "science"
+    },
+    "submit_date": 1265651817,
+    "topic": {
+      "name": "GeneralSciences",
+      "short_name": "general_sciences"
+    },
+    "promote_date": 1265703003,
+    "id": "19106141",
+    "media": "news",
+    "diggs": 176,
+    "description": "Theworldssmallestspeciesofeel-loachfishhasbeendiscoveredbyaNaturalHistoryMuseumscientistandhiscolleaguethismonthandisfeaturedontheMuseumsSpeciesofthedaytoday.",
+    "link": "http: //www.physorg.com/news184855470.html",
+    "user": {
+      "name": "MediaSight",
+      "registered": 1203697654,
+      "icon": "http://digg.com/users/MediaSight/l.png",
+      "profileviews": 63278
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31IANZ",
+        "view_count": 426
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27673238d3ba3ca00163f"
+    },
+    "href": "http://digg.com/world_news/Accused_New_York_bomb_plotter_s_father_pleads_not_guilty",
+    "title": "Accused New York bomb plotter'sfatherpleadsnotguilty",
+    "comments": 4,
+    "thumbnail": {
+      "originalheight": 149,
+      "originalwidth": 220,
+      "src": "http: //digg.com/world_news/Accused_New_York_bomb_plotter_s_father_pleads_not_guilty/t.jpg",
+      "height": 80,
+      "width": 80,
+      "contentType": "image/jpeg"
+    },
+    "container": {
+      "name": "World&Business",
+      "short_name": "world_business"
+    },
+    "submit_date": 1265766858,
+    "topic": {
+      "name": "WorldNews",
+      "short_name": "world_news"
+    },
+    "promote_date": 1265845805,
+    "id": "19141853",
+    "media": "news",
+    "diggs": 143,
+    "description": "NEWYORK(Reuters)-ThefatherofanAfghan-bornairportshuttledriveraccusedofplottinganalQaeda-inspiredbombattackonNewYorkCitypleadednotguiltyonTuesdaytochargesofconspiringto",
+    "link": "http: //www.reuters.com/article/idUSTRE6185M120100209?feedType=RSS&feedName=domesticNews",
+    "user": {
+      "name": "AtlasShruggedd",
+      "registered": 1233318066,
+      "icon": "http: //digg.com/users/AtlasShruggedd/l.png",
+      "profileviews": 2058
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31IJfZ",
+        "view_count": 212
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba276b5238d3ba3ca001678"
+    },
+    "href": "http: //digg.com/world_news/Accused_New_York_bomb_plotter_s_father_pleads_not_guilty",
+    "title": "AccusedNewYorkbombplotters father pleads not guilty ",
+    "comments": 4,
+    "thumbnail": {
+      "originalheight": 149,
+      "originalwidth": 220,
+      "src": "http://digg.com/world_news/Accused_New_York_bomb_plotter_s_father_pleads_not_guilty/t.jpg",
+      "height": 80,
+      "width": 80,
+      "contentType": "image/jpeg"
+    },
+    "container": {
+      "name": "World & Business",
+      "short_name": "world_business"
+    },
+    "submit_date": 1265766858,
+    "topic": {
+      "name": "World News",
+      "short_name": "world_news"
+    },
+    "promote_date": 1265845805,
+    "id": "19141853",
+    "media": "news",
+    "diggs": 143,
+    "description": "NEW YORK (Reuters) - The father of an Afghan-born airport shuttle driver accused of plotting an al Qaeda-inspired bomb attack on New York City pleaded not guilty on Tuesday to charges of conspiring to",
+    "link": "http://www.reuters.com/article/idUSTRE6185M120100209?feedType=RSS&feedName=domesticNews",
+    "user": {
+      "name": "AtlasShruggedd",
+      "registered": 1233318066,
+      "icon": "http://digg.com/users/AtlasShruggedd/l.png",
+      "profileviews": 2058
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31IJfZ",
+        "view_count": 212
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba27562238d3ba3ca0014ac"
+    },
+    "href": "http://digg.com/general_sciences/Searching_for_Network_Laws_in_Slime",
+    "title": "Searching for Network Laws in Slime",
+    "comments": 3,
+    "container": {
+      "name": "Science",
+      "short_name": "science"
+    },
+    "submit_date": 1266002326,
+    "topic": {
+      "name": "General Sciences",
+      "short_name": "general_sciences"
+    },
+    "promote_date": 1266027603,
+    "id": "19214837",
+    "media": "news",
+    "diggs": 167,
+    "description": "Of all sciencesmodelorganisms",
+    "link": "http: //www.wired.com/wiredscience/2010/02/slime-molds/",
+    "user": {
+      "name": "Shiner76",
+      "registered": 1201630672,
+      "icon": "http: //digg.com/users/Shiner76/l.png",
+      "profileviews": 36166
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31Icej",
+        "view_count": 245
+      }
+    ]
+  },
+  {
+    "_id": {
+      "$oid": "4ba274dc238d3ba3ca0013ae"
+    },
+    "href": "http: //digg.com/people/BBC_to_Reveal_Unseen_Henry_Moore",
+    "title": "BBCtoRevealUnseenHenryMoore",
+    "comments": 3,
+    "container": {
+      "name": "Offbeat",
+      "short_name": "offbeat"
+    },
+    "submit_date": 1266214667,
+    "topic": {
+      "name": "People",
+      "short_name": "people"
+    },
+    "promote_date": 1266264602,
+    "id": "19261082",
+    "media": "news",
+    "diggs": 231,
+    "description": "Sixty-year-oldfilmsofHenryMoore",
+    "link": "http: //www.independent.co.uk/arts-entertainment/tv/news/bbc-to-reveal-unseen-henry-moore-1899535.html",
+    "user": {
+      "name": "chris1234",
+      "registered": 1175061300,
+      "icon": "http: //digg.com/users/chris1234/l.png",
+      "profileviews": 76293
+    },
+    "status": "popular",
+    "shorturl": [
+      {
+        "short_url": "http: //digg.com/d31Iogc",
+        "view_count": 331
+      }
+    ]
+  }
+ 
+]
