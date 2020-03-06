@@ -1,5 +1,4 @@
-USE GestionSalas; 
-GO  
+ 
 CREATE TABLE Maquinas( 
  id int identity(1,1) constraint pk_maquinas primary key, 
  etiqueta nvarchar(50) not null, 
