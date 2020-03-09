@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+    // multi-line literals ``   - Las plantillas de cadena de texto (template strings
+    var textJSONEmpleados = `{"employees":[
+        {"firstName":"John", "lastName":"Doe"},
+        {"firstName":"Anna", "lastName":"Smith"},
+        {"firstName":"Peter", "lastName":"Jones"}]}`;
+
+
+    function MostrarResultadosEmpleados() {
+
+        objJSON = JSON.parse(textJSONEmpleados);
+        var res = document.getElementById("resultados");
+        res.innerHTML +=  objJSON.employees[0].firstName;
+        res.innerHTML +=  objJSON.employees[0].lastName;
+    }
+    
+
+    // OJO: Esta vez es un array
+    var arrayJSONEmpleadosArray = [{
+        "id": 123456,
+        "first_name": "Joe ",
+        "last_name": "Soap",
+        "email": "",
+        "image_url": "http",
+        "updated_on": "2017-03-06 12:09:47"
+        }, {
+        "id": 000123,
+        "first_name": "Mary",
+        "last_name": "Soap",
+        "email": "",
+        "image_url": "http",
+        "updated_on": "2017-03-07 06:31:25"
+        }];
+    
+    function MostrarResultadosEmpleadosArray() {
+
+        var res = document.getElementById("resultados");
+        res.innerHTML +=  arrayJSONEmpleadosArray[0].first_name;
+        res.innerHTML +=  arrayJSONEmpleadosArray[0].last_name;
+
+        res.innerHTML += "Empleados:<br>"
+        arrayJSONEmpleadosArray.forEach(e => {
+            res.innerHTML += e.first_name;
+        });
+    }
+
+
+
+
+    var textJSONMongoDB = `{
+        "name": "notebook",
+        "qty": 50,
+        "rating": [ { "score": 8 }, { "score": 9 } ],
+        "size": { "height": 11, "width": 8.5, "unit": "in" },
+        "status": "A",
+        "tags": [ "college-ruled", "perforated"]
+        }`;
+
+        function MostrarResultadosMongoDB() {
+
+            objJSON = JSON.parse(textJSONMongoDB);
+            var res = document.getElementById("resultados");
+            res.innerHTML +=  objJSON.name;
+            res.innerHTML +=  objJSON.qty;
+            res.innerHTML +=  "SCORE: " + objJSON.rating[0].score;
+            //bucle de array - foreach
+            res.innerHTML +=  "<br>SCORES: "
+            objJSON.rating.forEach(r => {
+                res.innerHTML += r.score;
+                res.innerHTML +=  "</br>";
+            });
+
+            }
+
+    </script>
+</head>
+<body>
+    <div id="resultados"></div>
+    <button onclick="MostrarResultadosEmpleados();">Get Resultados Empleados</button>
+    <button onclick="MostrarResultadosEmpleadosArray();">Get Resultados Empleados Array</button>
+
+    <button onclick="MostrarResultadosMongoDB();">Get Resultados MongoDB</button>
+</body>
+</html>
