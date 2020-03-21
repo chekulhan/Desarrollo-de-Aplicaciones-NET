@@ -59,3 +59,13 @@ console.log(uc);
 var s = "this is a string";
 
 console.log(uc.upperCase(s));
+
+
+// Paises y sus regiones
+var worldCountries = require("world-countries");
+
+worldCountries.forEach(element => {
+  console.log(`Pais ${element.name.common} y region: ${element.region}`);
+});
+
+console.log("end");
