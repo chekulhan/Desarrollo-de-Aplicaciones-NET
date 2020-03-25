@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>CSS Float - Layout</title>
+
+    <style>
+
+    code {
+        border-radius: 6px;
+        color: #fff;
+        display: block;
+        font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+        padding: 24px 15px;
+        text-align: center;
+    }
+
+    footer {
+        margin-bottom: 0;
+    }
+
+    .div1 {
+        width: 100px;
+        height: 50px;
+        float: left;
+        border: 3px solid green;
+    }
+
+    .div2 {
+        border: 3px solid red;
+    }
+
+    </style>
+</head>
+<body>
+    
+
+<header style="background: green;">
+    <code>&#60;header&#62;</code>
+</header>
+
+<aside style="background: grey;">
+    <code>&#60;aside&#62;</code>
+</aside>
+
+<section style="background: blue;">
+    <code>&#60;section&#62;</code>
+</section>
+
+<footer style="background: orange;">
+    <code>&#60;footer&#62;</code>
+</footer>
+      
+<hr>
+
+<p>
+    <img src="img_car.jpg" alt="Car" style="width:170px;height:170px;margin-left:15px;">
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum, nisi lorem egestas odio, 
+vitae scelerisque enim ligula venenatis dolor. Maecenas nisl est, ultrices nec congue eget, auctor vitae massa. Fusce luctus vestibulum augue ut 
+aliquet. Mauris ante ligula, facilisis sed ornare eu, lobortis in odio. Praesent convallis urna a lacus interdum ut hendrerit risus congue. 
+Nunc sagittis dictum nisi, sed ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis imperdiet sed ornare turpis. 
+Donec vitae dui eget tellus gravida venenatis. Integer fringilla congue eros non fermentum. Sed dapibus pulvinar nibh tempor porta. Cras ac leo purus. Mauris quis diam velit.
+</p>
+
+<br><br><br><br>
+<hr>
+<br><br><br><br>
+
+
+<h2>With clear</h2>
+<div class="div1">div3</div>
+<div class="div2">div4 - Here, clear: left; moves div4 down below the floating div3. The value "left" clears elements floated to the left. You can also clear "right" and "both".</div>
+
+
+</body>
+</html>
