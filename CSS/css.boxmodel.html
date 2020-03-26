@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+
+        div {
+            height: 100px;
+            width: 200px;
+            background-color: green;
+            display: block; /* BLOCK: por defecto para P, DIV, H1, etc... INLINE: span, b, a  */
+           
+        }
+
+        .css-box-model {
+            width: 500px;
+            height: 150px;
+            margin: 10px;
+            padding: 25px;
+            border: 5px solid black;
+            }
+
+        .css-box-model-small {
+            width: 500px;
+            height: 150px;
+            margin: 10px;
+            }
+
+        .css-box-model-big {
+            width: 500px;
+            height: 150px;
+            margin: 10px;
+            padding: 25px;
+            border: 5px solid black;
+            /* box-sizing: border-box;   El padding y border no incrementan su tomaño*/
+            }
+
+        
+
+    </style>
+</head>
+<body>
+    <div>DIV 1</div> Here is some text outside a DIV.
+    <p>Here is some text</p>
+    <p>I am a paragraph. A short one.</p>
+    <ul>
+    <li>Item One</li>
+    <li>Item Two</li>
+    <li>Item Three</li>
+    </ul>
+    <p>I am another paragraph. Some of the <span>words</span> have been wrapped in a <span>span element</span>.</p>
+       
+    <hr>
+    <div class="css-box-model">Here is a standard CSS box model </div>
+    <div class="css-box-model-small">Here is a standard CSS box model small</div>
+    <div class="css-box-model-big">Here is a standard CSS box model big</div>
+</body>
+</html>
