@@ -69,3 +69,11 @@ worldCountries.forEach(element => {
 });
 
 console.log("end");
+
+
+// npm i chalk
+var Chalk = require("chalk");
+console.log(Chalk.blue("Hello world"));
+console.log("end");
+
+
