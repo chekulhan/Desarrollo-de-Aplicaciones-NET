@@ -8,7 +8,7 @@ Qué es el modelo de entidad-relación?
 Diferencias entre tablas temporales globales (##) y locales (#)
 Qué tipo de relaciones puede haber en SQL Server?
 ¿Como se conecta a una base de datos con VSCode?
-¿Qué es la Normalización?
+¿Qué es la Normalización? - https://guru99.es/database-normalization/
 */
 
 
