@@ -1,6 +1,17 @@
-USE DevDB1;
 
-GO
+
+-- Buenas preguntas
+/*
+
+Qué diferencias entre DML, DDL y DCL? - ver podcast (https://emiliopm.com/podcast/38-diferencias-entre-ddl-dml-y-dcl/)
+Qué es el modelo de entidad-relación?
+Diferencias entre tablas temporales globales (##) y locales (#)
+Qué tipo de relaciones puede haber en SQL Server?
+¿Como se conecta a una base de datos con VSCode?
+¿Qué es la Normalización?
+*/
+
+
 -- documento: SQL Tablas y Tipos - https://docs.google.com/document/d/1bc73bu0wG8XpoMk36-r9mjup6iSnwcZPaiNjyeiP878/
 
 SELECT * FROM sales.staffs
