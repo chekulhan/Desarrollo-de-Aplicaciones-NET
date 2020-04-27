@@ -96,3 +96,35 @@ SELECT * FROM sales.orders TABLESAMPLE ( 1000 ROWS )
 SELECT * FROM sales.orders TABLESAMPLE ( 10 PERCENT )
 -- non -deterministic, si ejecutas otra vez, se devuleve diferentes datos
 
+
+----------------------------------
+SELECT * FROM sys.databases
+
+SELECT * FROM sys.database_files
+
+
+-- marcas de seguimiento
+DBCC TRACESTATUS
+DBCC TRACEON(3604)
+DBCC TRACEOFF(3604)
+
+-- crear una table e insertar unas filas
+CREATE TABLE tblNombre (
+Nombre char(100)
+)
+INSERT INTO tblNombre(Nombre)
+VALUES ('Juan')
+--m_freeCnt = 7333
+
+
+SELECT * FROM tblNombre
+
+-- una página 8KB = 8,000 (o 128kb per MB)
+
+-- database console commands
+DBCC IND('DevDB1','tblNombre',-1)
+DBCC PAGE('DevDB1', 1, 592, 1)
+-- DBCC PAGE('BD', IAMFID, PagePID, Nivel de info)
+
+--SYS.DM_DB_DATABASE_PAGE_ALLOCATIONS
+
