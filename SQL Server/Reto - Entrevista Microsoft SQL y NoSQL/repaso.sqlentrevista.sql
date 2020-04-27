@@ -9,6 +9,21 @@ Diferencias entre tablas temporales globales (##) y locales (#)
 Qué tipo de relaciones puede haber en SQL Server?
 ¿Como se conecta a una base de datos con VSCode?
 ¿Qué es la Normalización? - https://guru99.es/database-normalization/
+
+
+
+Solucion a pregunta de confinamento:
+¿Cómo llevarías a cabo la entrevista, ya que estamos trabajando todos desde casa durante el confinamiento? Aportar soluciones y/o sugerencias.
+
+La entrevista se podría hacer por videollamada (skype, hangouts…). Es la manera más sencilla de realizar una entrevista durante el confinamiento. Ya que mediante estas herramientas se puede mostrar pantalla, ver a la persona entrevistada y ella a ti.
+Apps para hacer videollamadas.
+Skype:https://www.skype.com/es/ Hasta 25 personas. 10 en pantalla.
+HangOuts:  https://chrome.google.com/webstore/detail/google-hangouts/knipolnnllmklapflnccelgolnpehhpl?hl=es
+ 		Hasta 10 personas en pantalla.
+ZOOM: https://zoom.us/ Hasta 12 personas en pantalla.
+Appear: https://www.appeartv.com/about-appear/ Hasta 8 personas en pantalla.
+		WhatsApp: https://www.whatsapp.com/ Hata 4 personas en pantalla.
+
 */
 
 
