@@ -105,8 +105,9 @@ SELECT * FROM sys.database_files
 
 -- marcas de seguimiento
 DBCC TRACESTATUS
-DBCC TRACEON(3604)
+DBCC TRACEON(3604) -- enviar output a la consola
 DBCC TRACEOFF(3604)
+-- más sobre trace flags = https://victorisakov.files.wordpress.com/2011/10/sql_pass_summit_2011-important_trace_flags_that_every_dba_should_know-victor_isakov.pdf
 
 -- crear una table e insertar unas filas
 CREATE TABLE tblNombre (
