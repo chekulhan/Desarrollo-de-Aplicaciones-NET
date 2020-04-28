@@ -1,0 +1,41 @@
+﻿using System;
+using System.Linq;
+using DotNetConsole.Data;
+using DotNetConsole.Models;
+
+namespace DotNetConsole
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            using (var db = new SQLiteDBContext())
+            {
+                // Insert
+                db.VideoGames.Add(new VideoGame { Title="Pokemon", Platform = "Nintendo", ReleaseYear=2001});
+                db.VideoGames.Add(new VideoGame { Title="Another", Platform = "Nintendo", ReleaseYear=2020});
+
+                db.SaveChanges();
+                Console.WriteLine("Video juego añadido...");
+
+                // Read
+                Console.WriteLine("Buscando video juegos...");
+                var videogames = db.VideoGames.ToList();
+                
+                foreach (var item in videogames)
+                {
+                    Console.Write(item.Title);
+                    Console.WriteLine(item.Platform);
+                }
+               
+                
+               
+            }
+
+
+           
+            
+        }
+    }
+}
