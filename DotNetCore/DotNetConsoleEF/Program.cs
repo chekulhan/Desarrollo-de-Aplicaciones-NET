@@ -14,7 +14,7 @@ namespace DotNetConsole
             {
                 // Insert
                 db.VideoGames.Add(new VideoGame { Title="Pokemon", Platform = "Nintendo", ReleaseYear=2001});
-                db.VideoGames.Add(new VideoGame { Title="Another", Platform = "Nintendo", ReleaseYear=2020});
+                db.VideoGames.Add(new VideoGame { Title="Minecraft", Platform = "XBox", ReleaseYear=2020});
 
                 db.SaveChanges();
                 Console.WriteLine("Video juego añadido...");
@@ -23,10 +23,11 @@ namespace DotNetConsole
                 Console.WriteLine("Buscando video juegos...");
                 var videogames = db.VideoGames.ToList();
                 
-                foreach (var item in videogames)
+                foreach (var videogame in videogames)
                 {
-                    Console.Write(item.Title);
-                    Console.WriteLine(item.Platform);
+                    Console.WriteLine($"{videogame.Title} - {videogame.Platform} - {videogame.ReleaseYear}");
+                    Console.Write(videogame.Title);
+                    Console.WriteLine(videogame.Platform);
                 }
                
                 
