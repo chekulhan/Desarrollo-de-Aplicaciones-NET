@@ -30,7 +30,22 @@ namespace DotNetConsole
                     Console.WriteLine(videogame.Platform);
                 }
                
+                // Borrar
+                Console.WriteLine("Borrando un video juego...");
+                VideoGame vg1 = db.VideoGames.First(); //get un objeto
+
+                db.VideoGames.Remove(vg1);
+                db.SaveChanges();
+
+
+                //Actualizar
+                Console.WriteLine("Actualizando un video juego...");
+                VideoGame vg2 = db.VideoGames.First(); //get un objeto
                 
+                vg2.ReleaseYear = 1990;
+
+                db.SaveChanges();
+
                
             }
 
