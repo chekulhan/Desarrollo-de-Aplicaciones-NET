@@ -1,5 +1,8 @@
+-- Repaso de plantas exoticas y medicinales
+-- Las actividades estan al final del documento
 
--- plantas (ENTENDER bien el contexto)
+-- REFERENCIAS:
+-- plantas (Para entender bien el contexto)
 -- https://www.guiaverde.com/guia-de-plantas/
 
 -- UNION operador:
@@ -72,7 +75,7 @@ VALUES ('Acacia rosada', 'Robinia hispida', 'Árbol ornamental', @descripcion)
 2. Sacar una consulta para mostrar todos los nombres comunes  (NombreComun) de las dos tablas, sin repeticiones (UNION)
 
 Avanzado:
-3. Si introducimos una descripcion con muchos, mucho datos, para que el máximo tamaño de la fila sobrepasa 8,000 KB, como podemos VER si los datos estan en la misma página o una página OVERFLOW
+3. Si introducimos una descripcion con muchos, muchos datos, para que el máximo tamaño de la fila sobrepasa 8,000 KB, como podemos VER si los datos estan en la misma página o una página OVERFLOW
 PISTA: lo que hice en la última videoconferencia - http://www.guillesql.es/Articulos/DBCC_IND_DBCC_PAGE_Paginas_Tabla_Indice_SQLServer.aspx
 
 */
