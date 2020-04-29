@@ -69,5 +69,10 @@ VALUES ('Acacia rosada', 'Robinia hispida', 'Árbol ornamental', @descripcion)
 
 -- ACTIVIDAD: 
 1. Insertar esta planta en la tabla plantas_medicinales - https://www.guiaverde.com/guia-de-plantas/adenium-obesum-3021/
-2. Sacar una consulta para mostrar todos los nombres comunes de las dos tablas, sin repeticiones (UNION)
+2. Sacar una consulta para mostrar todos los nombres comunes  (NombreComun) de las dos tablas, sin repeticiones (UNION)
+
+Avanzado:
+3. Si introducimos una descripcion con muchos, mucho datos, para que el máximo tamaño de la fila sobrepasa 8,000 KB, como podemos VER si los datos estan en la misma página o una página OVERFLOW
+PISTA: lo que hice en la última videoconferencia - http://www.guillesql.es/Articulos/DBCC_IND_DBCC_PAGE_Paginas_Tabla_Indice_SQLServer.aspx
+
 */
