@@ -79,3 +79,29 @@ Avanzado:
 PISTA: lo que hice en la última videoconferencia - http://www.guillesql.es/Articulos/DBCC_IND_DBCC_PAGE_Paginas_Tabla_Indice_SQLServer.aspx
 
 */
+
+-- videoconferencia del profesor con OPENROWSET
+
+/* 
+SINGLE_BLOB |      Designate the SINGLE_BLOB object for importing into a varbinary(max) data
+SINGLE_CLOB |      type, SINGLE_CLOB for ASCII data into a varchar(max) data type, and
+SINGLE_NCLOB      SINGLE_NCLOB for importing into a nvarchar(max) UNICODE data type.
+*/
+DECLARE @descripcion varchar(MAX)
+SET @descripcion = 'Flor con image'
+
+INSERT INTO plantas_medicinales (NombreComun, NombreLatin, Tipo, Descripcion, Foto)
+SELECT 'Flor con IMAGE', 'Flor con IMAGE', 'Flor con IMAGE', @descripcion,
+  * FROM OPENROWSET(BULK '/tmp/test3.txt', SINGLE_BLOB) AS Foto; 
+
+SELECT *
+FROM plantas_medicinales;
+
+SELECT CAST(Foto AS VARCHAR(8000)) 
+FROM plantas_medicinales;
+
+-- Ejemplo sencillo de insertar los datos binarios en una tabla: 
+INSERT INTO dbo.tabla1(IDTabla, Nombre, data)  
+SELECT 4, 'Jon',  * FROM OPENROWSET(BULK N'C:/documents/tmp/test1.txt', SINGLE_BLOB) AS data; 
+
+
