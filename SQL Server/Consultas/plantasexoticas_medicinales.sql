@@ -104,4 +104,6 @@ FROM plantas_medicinales;
 INSERT INTO dbo.tabla1(IDTabla, Nombre, data)  
 SELECT 4, 'Jon',  * FROM OPENROWSET(BULK N'C:/documents/tmp/test1.txt', SINGLE_BLOB) AS data; 
 
+Videotutorial para VER datos binarios
+https://www.youtube.com/watch?v=zUFPTmmbQBM&feature=youtu.be
 
