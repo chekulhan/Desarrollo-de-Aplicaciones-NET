@@ -25,10 +25,15 @@ SELECT * FROM Estudiantes
 
 -- Usando CURSORes, llevar a cabo las actividades:
 -- Actividad 1: Imprimir los alumnos de Bilbao en formato CSV e.g 2,Rahul,Bilboa 
+
 -- Actividad 2: Cambiar la actividad 2 para IMPRIMIR el Saldo mas 10%, solo en el caso  que
 -- el Saldo es mayor a 23,000. e.g. 1,Pankaj,Donostia,27500
 
+-- Actividad 3: Usando un cursor SCROLL - Imprimir Pankaj, Neeraj, Omi
 
+
+
+-- ***************************************************************************************************
 -- Actividad 1: Respuesta
 declare @Estudiante_ID int
 declare @Nombre varchar(50)
@@ -57,6 +62,8 @@ WHILE @@FETCH_STATUS = 0
 CLOSE cursor_Alumnos
 DEALLOCATE cursor_Alumnos
 
+
+-- ***************************************************************************************************
 -- Actividad 2: Respuesta
 
 declare @Estudiante_ID int
@@ -83,6 +90,41 @@ WHILE @@FETCH_STATUS = 0
 
 		FETCH NEXT FROM cursor_Alumnos  into @Estudiante_ID, @Nombre, @Ciudad, @Saldo
 	END 
+
+CLOSE cursor_Alumnos
+DEALLOCATE cursor_Alumnos
+
+
+
+
+-- ***************************************************************************************************
+
+-- Actividad 3: SCROLL Cursor - Imprimir Pankaj, Neeraj, Omi
+
+declare @Nombre varchar(50)
+
+DECLARE cursor_Alumnos CURSOR SCROLL FOR
+SELECT Nombre
+FROM Estudiantes
+
+OPEN cursor_Alumnos
+
+--Con SCROLL, puedo ir a diferentes filas usando FIRST, LAST, PRIOR, NEXT, RELATIVE, ABSOLUTE
+FETCH FIRST FROM cursor_Alumnos INTO @Nombre
+
+print @Nombre
+print '--------------------------'
+
+
+FETCH ABSOLUTE 5 FROM cursor_Alumnos INTO @Nombre 
+print @Nombre 
+
+print '--------------------------'
+
+FETCH LAST FROM cursor_Alumnos INTO @Nombre 
+print @Nombre 
+
+print '--------------------------'
 
 CLOSE cursor_Alumnos
 DEALLOCATE cursor_Alumnos
