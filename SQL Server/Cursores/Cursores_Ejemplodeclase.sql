@@ -1,5 +1,13 @@
 -- Cursores
 
+-- *******************************************************************************
+-- Usar el DMV para ver los cursores abiertos. 0 = todos los sesiones. Se podria hacer una consulta WHERE con la fecha de creacion
+SELECT creation_time, cursor_id, name, c.session_id, login_name   
+FROM sys.dm_exec_cursors(0) AS c   
+JOIN sys.dm_exec_sessions AS s ON c.session_id = s.session_id  
+-- *******************************************************************************
+
+
 
 CREATE TABLE Juegos ( 
  idJuego int identity(1,1) primary key, 
