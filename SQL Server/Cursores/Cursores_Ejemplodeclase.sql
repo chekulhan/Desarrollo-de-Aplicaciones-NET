@@ -77,6 +77,9 @@ OPEN cursor_juegos
 /*
 FORWARD_ONLY - Specifies that the cursor can only be scrolled from the first to the last row.
 SCROLL - It provides 6 options to fetch the data (FIRST, LAST, PRIOR, NEXT, RELATIVE and ABSOLUTE).
+-- e.g ABSOLUTE 5 - fila 5
+-- RELATIVE 2  - 2 filas mas adelante de la posicion actual.
+
 */
 
 --Con SCROLL, puedo ir a diferentes filas usando FIRST, LAST, PRIOR, NEXT, RELATIVE, ABSOLUTE
@@ -132,3 +135,6 @@ SELECT * FROM Estudiantes
 -- Actividad 1: Imprimir los alumnos de Bilbao en formato CSV e.g 2,Rahul,Bilboa 
 -- Actividad 2: Cambiar la actividad 2 para IMPRIMIR el Saldo mas 10%, solo en el caso  que
 -- el Saldo es mayor a 23,000. e.g. 1,Pankaj,Donostia,27500
+
+-- Actividad 3: Usando un cursor SCROLL - Imprimir Pankaj, Neeraj, Omi
+
